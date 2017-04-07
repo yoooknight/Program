@@ -93,10 +93,10 @@ class XiciProxyFinder(IProxyFinder):
 
 
 #================TEST===============
-if __name__ == '__main__':
-    finder = XiciProxyFinder("http://www.xicidaili.com/wn/")
+# if __name__ == '__main__':
+#    finder = XiciProxyFinder("http://www.xicidaili.com/wn/")
        
-    ppoll_instance = ProxyPool(finder)
-    ppoll_instance.get_proxies()
-    ppoll_instance.writeToTxt("proxy.txt")
+#    ppoll_instance = ProxyPool(finder)
+#    ppoll_instance.get_proxies()
+#    ppoll_instance.writeToTxt("proxy.txt")
 
