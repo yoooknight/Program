@@ -99,6 +99,7 @@ def chooseClass(token):
     # 解析该文本，获取所选教练的所有空课程，解析出pid，
     # pid,日期，练车时间，教练
     bs = BeautifulSoup(response_html, "html5lib")
+    # class_list = bs.findAll("li", {'name': 'bespoke', 'coachname': '顾春雷C1'})
     class_list = bs.findAll("li", {'name': 'bespoke', 'coachname': '顾春雷C1'})
     if len(class_list) == 0:
         log("课程还没有发布，请稍后再试！")
