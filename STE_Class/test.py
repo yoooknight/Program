@@ -37,7 +37,6 @@ def login():
     handler = urllib2.HTTPCookieProcessor(tmp_cookie)
     opener = urllib2.build_opener(handler)
 
-    # data = json.dumps({'username': '510922199309091093', 'password': '091093'}).encode(encoding="utf-8")
     # print(zip(headers.keys(), headers.values()))
     opener.addheaders = zip(headers.keys(), headers.values())
     urllib2.install_opener(opener)
@@ -66,7 +65,7 @@ def sign():
     tmp_cookie = cookielib.MozillaCookieJar(filename)
     opener = urllib2.build_opener(urllib2.HTTPCookieProcessor(tmp_cookie))
 
-    data = urlencode({"username": "510922199309091093", "password": "091093"})
+    data = urlencode({"username": "", "password": ""})
 
     req = urllib2.Request(sign_url, data=data, headers=headers)
     response = opener.open(req)
