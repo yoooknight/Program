@@ -137,7 +137,7 @@ def finalClass(token, id_list):
         'X-Requested-With': 'XMLHttpRequest',
         'Referer': index_url + token
     }
-    # 声明一个MozillaCookieJar对象实例来保存cookie，之后写入文件
+    #  声明一个MozillaCookieJar对象实例来保存cookie，之后写入文件
     tmp_cookie = cookielib.MozillaCookieJar(filename)
     opener = urllib2.build_opener(urllib2.HTTPCookieProcessor(tmp_cookie))
 
