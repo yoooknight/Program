@@ -11,6 +11,8 @@ from urllib import urlencode
 from bs4 import BeautifulSoup
 import time
 import os
+import smtplib
+from email.mime.text import MIMEText
 
 import sys
 reload(sys)
@@ -22,6 +24,7 @@ sys.setdefaultencoding('utf8')
 login_url = "http://wechat.exc360.com/ukeywechat/student/login"
 # sign_url = "http://wechat.exc360.com/ukeywechat/student/sign"
 index_url = "http://wechat.exc360.com/ukeywechat/student/index?token="
+conf_path = "/home/Python/STE_Class/conf.json"
 
 
 def login():
@@ -34,11 +37,9 @@ def login():
     # 声明一个MozillaCookieJar对象实例来保存cookie，之后写入文件
     tmp_cookie = cookielib.MozillaCookieJar(filename)
     # 利用urllib2库的HTTPCookieProcessor对象来创建cookie处理器
-    # tmp_cookie = urllib2.MozillaCookieJar(cookie)
     handler = urllib2.HTTPCookieProcessor(tmp_cookie)
     opener = urllib2.build_opener(handler)
 
-    # print(zip(headers.keys(), headers.values()))
     opener.addheaders = zip(headers.keys(), headers.values())
     urllib2.install_opener(opener)
 
@@ -46,7 +47,7 @@ def login():
     urllib2.urlopen(login_url)
 
 
-def sign():
+def sign(conf):
     sign_url = "http://wechat.exc360.com/ukeywechat/student/sign"
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
@@ -59,7 +60,7 @@ def sign():
     tmp_cookie = cookielib.MozillaCookieJar(filename)
     opener = urllib2.build_opener(urllib2.HTTPCookieProcessor(tmp_cookie))
 
-    data = urlencode({"username": "", "password": ""})
+    data = urlencode({"username": conf['user'], "password": conf['password']})
     req = urllib2.Request(sign_url, data=data, headers=headers)
     response = opener.open(req)
 
@@ -67,7 +68,7 @@ def sign():
     return token
 
 
-def chooseClass(token):
+def chooseClass(token, coachname, date):
     no_student_list = []
     class_url = "http://wechat.exc360.com/ukeywechat/student/bespoke/jplist"
     filename = "cookie.txt"
@@ -86,10 +87,10 @@ def chooseClass(token):
     opener = urllib2.build_opener(urllib2.HTTPCookieProcessor(tmp_cookie))
     data = {
         "token": token,
-        "date": "2017-11-26",
+        "date": date,
         "km": "",
-        "startime": "2017-11-26%2006:00:00",
-        "endtime": "2017-11-26%2021:00:00"
+        "startime": date + "%2006:00:00",
+        "endtime": date + "%2021:00:00"
     }
     req = urllib2.Request(class_url, data=urlencode(data), headers=headers)
     response = opener.open(req)
@@ -98,8 +99,7 @@ def chooseClass(token):
     # 解析该文本，获取所选教练的所有空课程，解析出pid，
     # pid,日期，练车时间，教练
     bs = BeautifulSoup(response_html, "html5lib")
-    # class_list = bs.findAll("li", {'name': 'bespoke', 'coachname': '顾春雷C1'})
-    class_list = bs.findAll("li", {'name': 'bespoke', 'coachname': '顾春雷C1'})
+    class_list = bs.findAll("li", {'name': 'bespoke', 'coachname': coachname})
     if len(class_list) == 0:
         log("课程还没有发布，请稍后再试！")
         exit()
@@ -124,12 +124,15 @@ def chooseClass(token):
         else:
             f_handle.write("  " + "has student" + "\n")
 
-    print(no_student_list)
-    return [no_student_list[2], no_student_list[3]]
+    if len(no_student_list) > 2:
+        return [no_student_list[2], no_student_list[3]]
+    else:
+        return no_student_list
 
 
 def finalClass(token, id_list):
     confirm_url = "http://wechat.exc360.com/ukeywechat/student/bespoke/ok"
+    mail_content = []
     filename = "cookie.txt"
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
@@ -151,21 +154,53 @@ def finalClass(token, id_list):
         response = opener.open(req)
         response_html = response.read()
 
-        status = json.loads(response_html)['status']
-        if status == '406':
+        response_final = json.loads(response_html)
+
+        log_rescode(response_final['status'], response_final['info'])
+        if response_final['status'] == '406':
             log("当前的预约次数已经超过了本日限制")
             exit()
         else:
+            mail_content.append("课程：" + pinfo['datetime'] + "选课成功!\n")
             log("课程" + pinfo['datetime'] + "选择成功!")
 
+    mail_content = "" . join(mail_content)
+    mail(conf_json, "STE选课成功", mail_content)
 
 def log(info):
     current_time = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(time.time()))
     fhandle = open("result.log", "a")
     fhandle.write("[ " + current_time + " ]" + info + "\n")
 
+
+def log_rescode(status, info):
+    current_time = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(time.time()))
+    fhandle = open("rescode.log", "a")
+    fhandle.write("[ " + current_time + " ]" + " [ status_code：" + status + " ] [ status_info：" + info + " ]\n")
+
+def read_conf():
+    with open(conf_path) as f:
+        conf = json.load(f, encoding="utf-8")
+    return conf
+
+def mail(conf, subject, content):
+    msg = MIMEText(content.encode('utf-8'))
+    msg['Subject'] = subject
+    msg['From'] = conf['msg_from']
+    msg['To'] = conf['msg_to']
+    try:
+        s = smtplib.SMTP_SSL("smtp.qq.com", 465) # 邮件服务器及端口号
+        s.login(conf['msg_from'], conf['msg_pwd'])
+        s.sendmail(conf['msg_from'], conf['msg_to'], msg.as_string())
+        print("发送成功")
+    except s.SMTPException, e:
+        print("发送失败")
+    finally:
+        s.quit()
+
 if __name__ == "__main__":
+    conf_json = read_conf()
     login()
-    token = sign()
-    id_list = chooseClass(token)
+    token = sign(conf_json)
+    id_list = chooseClass(token, conf_json['coachname'], conf_json['date'])
     finalClass(token, id_list)
