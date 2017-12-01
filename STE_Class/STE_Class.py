@@ -124,7 +124,7 @@ def chooseClass(token, coachname, date):
         else:
             f_handle.write("  " + "has student" + "\n")
 
-    if len(no_student_list) > 2:
+    if len(no_student_list) > 3:
         return [no_student_list[2], no_student_list[3]]
     else:
         return no_student_list
@@ -159,7 +159,7 @@ def finalClass(token, id_list):
         log_rescode(response_final['status'], response_final['info'])
         if response_final['status'] == '406':
             log("当前的预约次数已经超过了本日限制")
-            exit()
+            exit(9)
         else:
             mail_content.append("课程：" + pinfo['datetime'] + "选课成功!\n")
             log("课程" + pinfo['datetime'] + "选择成功!")
