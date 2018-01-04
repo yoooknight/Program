@@ -2,7 +2,7 @@
 # !/usr/bin/env python
 
 
-""""
+"""
 Author:YoooKnight
 Programe: Test...
 History: Frist Released 2017/12/25
@@ -17,8 +17,10 @@ if __name__ == "__main__":
     a = XiciFinder()
     res = a.get_proxies()
     # print(res)
-    b = MysqlSaver()
-    b.save_proxy(res, "xici")
+    # b = MysqlSaver()
+    # b.save_proxy(res, "xici")
+    # b.clear()
+    # print(b.get_proxy())
 
 
     # print(res)
