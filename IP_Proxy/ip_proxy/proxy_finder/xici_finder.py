@@ -4,7 +4,7 @@
 
 from http_mng.manage import o
 from proxy_finder.finder import *
-from util.common import check_proxy_ip
+from util.common import *
 from bs4 import BeautifulSoup
 
 
@@ -31,18 +31,16 @@ class XiciFinder(finder):
                 protocol = ip_info[5].contents[0].lower()
                 port = ip_info[2].contents[0]
                 ip = ip_info[1].contents[0]
-                res = check_proxy_ip({protocol: ip + ":" + port})
 
-                if res:
-                    print("ip: " + ip + " valid")
-                    ip_tmp_dic = {
-                        "ip": ip,
-                        "port": port,
-                        "protocol": protocol
-                    }
-                    self.ip_list.append(ip_tmp_dic)
-                else:
-                    print("ip: " + ip + " invalid")
+                print("ip: " + ip + " valid")
+                ip_tmp_dic = {
+                    "ip": ip,
+                    "port": port,
+                    "protocol": protocol
+                }
+                self.ip_list.append(ip_tmp_dic)
+        
+        self.ip_list = check_proxy_list(self.ip_list)
         return self.ip_list
 
 

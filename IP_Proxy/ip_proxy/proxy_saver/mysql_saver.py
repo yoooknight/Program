@@ -48,7 +48,7 @@ class MysqlSaver:
     def clear(self):
         all_proxies = self.get_proxy()        
         for proxy in all_proxies:
-            res = check_proxy_ip({proxy[1].lower():proxy[2]+":"+proxy[3]})
+            res = check_proxy_ip(proxy[1].lower(), proxy[2], proxy[3])
             if res is False:
                 sql = self.del_sql.format(id=proxy[0]) 
                 try:

@@ -14,12 +14,12 @@ from proxy_saver.mysql_saver import MysqlSaver
 
 if __name__ == "__main__":
     # pass
-    a = XiciFinder()
-    res = a.get_proxies()
+    #a = XiciFinder()
+    #res = a.get_proxies()
     # print(res)
-    # b = MysqlSaver()
+    b = MysqlSaver()
     # b.save_proxy(res, "xici")
-    # b.clear()
+    b.clear()
     # print(b.get_proxy())
 
 
