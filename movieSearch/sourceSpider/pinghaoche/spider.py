@@ -40,8 +40,8 @@ class Spider:
             detailRes = urllib.request.urlopen(detailReq)
             detailHtml = detailRes.read().decode('utf-8')
 
-            with open('detail_7.html', 'a', encoding='utf-8') as f:
-                f.write(detailHtml)
+            # with open('detail_7.html', 'a', encoding='utf-8') as f:
+            #     f.write(detailHtml)
 
             dic = []
 

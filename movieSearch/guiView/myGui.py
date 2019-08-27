@@ -7,7 +7,7 @@ class myGui:
         self.init_window_name = init_window_name
 
     def setInitWindow(self):
-        self.init_window_name.title("百度网盘资源搜索")
+        self.init_window_name.title("百度网盘资源搜索 by YoooKnight")
 
         self.init_window_name.geometry('500x400')
 
