@@ -32,50 +32,55 @@ class Spider:
 
         # 读取详情页面
         soup = BeautifulSoup(html, 'html.parser')
-        detailUrl = soup.find('div', class_='mainleft').find('div', class_='thumbnail').find('a').get('href')
+        try:
+            detailUrl = soup.find('div', class_='mainleft').find('div', class_='thumbnail').find('a').get('href')
 
-        # 获取详情页面
-        detailReq = urllib.request.Request(detailUrl, headers=self.headers)
-        detailRes = urllib.request.urlopen(detailReq)
-        detailHtml = detailRes.read().decode('utf-8')
+            # 获取详情页面
+            detailReq = urllib.request.Request(detailUrl, headers=self.headers)
+            detailRes = urllib.request.urlopen(detailReq)
+            detailHtml = detailRes.read().decode('utf-8')
 
-        with open('detail_5.html', 'a', encoding='utf-8') as f:
-            f.write(detailHtml)
+            with open('detail_7.html', 'a', encoding='utf-8') as f:
+                f.write(detailHtml)
 
-        dic = []
+            dic = []
 
-        soup = BeautifulSoup(detailHtml, 'html.parser')
-        # postContent = soup.find("div", id="post_content")
-        # print(h2Content)
+            soup = BeautifulSoup(detailHtml, 'html.parser')
+            # postContent = soup.find("div", id="post_content")
+            # print(h2Content)
 
-        # linkUrl = h2Content.find("a").get("href")
+            # linkUrl = h2Content.find("a").get("href")
 
-        aList = soup.findAll("a")
-        linkUrlList = []
-        for aTag in aList:
-            tempHref = aTag.get("href")
+            aList = soup.findAll("a")
+            linkUrlList = []
+            for aTag in aList:
+                tempHref = aTag.get("href")
 
-            if tempHref and tempHref.find("pan.baidu.com")>=0:
-                linkUrlList.append(tempHref)
+                if tempHref and tempHref.find("pan.baidu.com")>=0:
+                    linkUrlList.append(tempHref)
 
-        # nn = re.search('提取码\: .{4}', str(postContent) + "提取码: mnxf")
-        codeList = re.findall('提取码[\:\：][ ]?.{4}', str(detailHtml))
-        # print(type(str(postContent)))
-        # print(nn)
-        # print(str(postContent))
-        # print(nn.group(1))
+            # nn = re.search('提取码\: .{4}', str(postContent) + "提取码: mnxf")
+            codeList = re.findall('((提取码|密码)[\:\：][ ]?.{4})', str(detailHtml))
+            # print(type(str(postContent)))
+            # print(nn)
+            # print(str(postContent))
+            # print(nn.group(1))
 
-        # c = b.split(": ")
-        # linkUrl = c[1].split(" ")[0]
-        # code = c[2].split(" ")[0]
+            # c = b.split(": ")
+            # linkUrl = c[1].split(" ")[0]
+            # code = c[2].split(" ")[0]
 
-        index=0
-        for link in linkUrlList:
-            tempDic = {
-                "link": link,
-                "code": codeList[index][-4:]
-            }
-            dic.append(tempDic)
-            index += 1
+            index=0
+            for link in linkUrlList:
+                if (index<len(codeList)):
+                    tempDic = {
+                        "link": link,
+                        "code": codeList[index][0][-4:]
+                    }
+                    dic.append(tempDic)
+                    index += 1
 
-        return dic
+            return dic
+        except Exception as e:
+            print(e)
+            return []

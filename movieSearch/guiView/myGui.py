@@ -9,14 +9,20 @@ class myGui:
     def setInitWindow(self):
         self.init_window_name.title("百度网盘资源搜索")
 
-        self.init_window_name.geometry('500x300')
+        self.init_window_name.geometry('500x400')
 
         self.init_search_Text = Text(self.init_window_name, width=30, height=2)
         self.init_search_Text.grid(row=0, column=1, padx=20, pady=10)
 
-        self.init_result_data = Text(self.init_window_name, width=50, height=30)
+        # 结果集
+        self.init_result_data = Text(self.init_window_name, width=50, height=20)
         self.init_result_data.config(state=DISABLED)
         self.init_result_data.grid(row=1, column=1, columnspan=2, padx=20, pady=10, sticky=W)
+
+        #滚动条
+        scroll = Scrollbar(command=self.init_result_data.yview)
+        self.init_result_data.config(yscrollcommand=scroll.set)
+        scroll.grid(row=1,column=3, sticky=S + W + E + N)
 
         # 查询按钮
         # lm = init_search_Text.get(1.0, END)
@@ -32,18 +38,24 @@ class myGui:
 
         a = pingSpider.Spider(search)
         ret = a.getlinkList()
-
         index = 1
         self.init_result_data.config(state=NORMAL)
         self.init_result_data.delete(1.0, END)
-        for temp in ret:
-            tempIndex = format(index, '0.1f')
-            self.init_result_data.insert(tempIndex, "链接地址：" + temp['link'] + "\n")
-            index += 1
-            tempIndex = format(index, '0.1f')
-            self.init_result_data.insert(tempIndex, "提取码：" + temp['code'] + "\n\n")
-            index += 2
+        if ret:
+            for temp in ret:
+                tempIndex = format(index, '0.1f')
+                self.init_result_data.insert(tempIndex, "链接地址：" + temp['link'] + "\n")
+                index += 1
+                tempIndex = format(index, '0.1f')
+                self.init_result_data.insert(tempIndex, "提取码：" + temp['code'] + "\n\n")
+                index += 2
+        else:
+            self.init_result_data.insert(1.0, "非常抱歉，没有找到你要的影片")
 
+
+        # for i in list(range(20)):
+        #     tempIndex = format(i, '0.1f')
+        #     self.init_result_data.insert(tempIndex, "lalalla\n")
         self.init_result_data.config(state=DISABLED)
 
 

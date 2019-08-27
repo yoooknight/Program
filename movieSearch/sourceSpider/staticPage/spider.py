@@ -20,7 +20,7 @@ class Spider:
             html = f.read()
 
         # 读取详情页面
-        with open('detail_4.html', encoding='utf-8') as f:
+        with open('detail_7.html', encoding='utf-8') as f:
             detailHtml = f.read()
 
         dic = []
@@ -46,7 +46,7 @@ class Spider:
                 linkUrlList.append(tempHref)
 
         # nn = re.search('提取码\: .{4}', str(postContent) + "提取码: mnxf")
-        codeList = re.findall('提取码[\:\：][ ]?.{4}', str(detailHtml))
+        codeList = re.findall('((提取码|密码)[\:\：][ ]?.{4})', str(detailHtml))
 
         # print(type(str(postContent)))
         # print(nn)
@@ -56,14 +56,18 @@ class Spider:
         # c = b.split(": ")
         # linkUrl = c[1].split(" ")[0]
         # code = c[2].split(" ")[0]
+        # print(codeList)
+        # print(linkUrlList)
+        # print(aList)
 
         index=0
         for link in linkUrlList:
-            tempDic = {
-                "link": link,
-                "code": codeList[index][-4:]
-            }
-            dic.append(tempDic)
-            index += 1
+            if (index<len(codeList)):
+                tempDic = {
+                    "link": link,
+                    "code": codeList[index][0][-4:]
+                }
+                dic.append(tempDic)
+                index += 1
 
         return dic
