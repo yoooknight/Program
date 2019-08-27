@@ -28,7 +28,7 @@ class Spider:
 
         # 读取爬取下来的网页数据
         # with open('index.html', encoding='utf-8') as f:
-            html = f.read()
+        #     html = f.read()
 
         # 读取详情页面
         soup = BeautifulSoup(html, 'html.parser')
@@ -39,19 +39,43 @@ class Spider:
         detailRes = urllib.request.urlopen(detailReq)
         detailHtml = detailRes.read().decode('utf-8')
 
-        # with open('detail.html', 'a', encoding='utf-8') as f:
-        #     f.write(detailHtml)
+        with open('detail_5.html', 'a', encoding='utf-8') as f:
+            f.write(detailHtml)
 
-        # with open('detail.html', encoding='utf-8') as f:
-        #     detailHtml = f.read()
+        dic = []
 
-        # print(detailHtml)
+        soup = BeautifulSoup(detailHtml, 'html.parser')
+        # postContent = soup.find("div", id="post_content")
+        # print(h2Content)
 
-        soup2 = BeautifulSoup(detailHtml, 'html.parser')
-        b = soup2.find('div', id='link-report').select('h2>span')[0].get_text()
+        # linkUrl = h2Content.find("a").get("href")
 
-        c = b.split(": ")
-        linkUrl = c[1].split(" ")[0]
-        code = c[2].split(" ")[0]
+        aList = soup.findAll("a")
+        linkUrlList = []
+        for aTag in aList:
+            tempHref = aTag.get("href")
 
-        return {'link': linkUrl, 'code': code}
+            if tempHref and tempHref.find("pan.baidu.com")>=0:
+                linkUrlList.append(tempHref)
+
+        # nn = re.search('提取码\: .{4}', str(postContent) + "提取码: mnxf")
+        codeList = re.findall('提取码[\:\：][ ]?.{4}', str(detailHtml))
+        # print(type(str(postContent)))
+        # print(nn)
+        # print(str(postContent))
+        # print(nn.group(1))
+
+        # c = b.split(": ")
+        # linkUrl = c[1].split(" ")[0]
+        # code = c[2].split(" ")[0]
+
+        index=0
+        for link in linkUrlList:
+            tempDic = {
+                "link": link,
+                "code": codeList[index][-4:]
+            }
+            dic.append(tempDic)
+            index += 1
+
+        return dic

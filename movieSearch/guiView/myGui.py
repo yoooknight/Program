@@ -1,5 +1,6 @@
 from tkinter import *
 from sourceSpider.pinghaoche import spider as pingSpider
+from sourceSpider.staticPage import spider as pageSpider
 
 class myGui:
     def __init__(self, init_window_name):
@@ -32,10 +33,17 @@ class myGui:
         a = pingSpider.Spider(search)
         ret = a.getlinkList()
 
+        index = 1
         self.init_result_data.config(state=NORMAL)
         self.init_result_data.delete(1.0, END)
-        self.init_result_data.insert(1.0, "链接地址：" + ret['link'])
-        self.init_result_data.insert(2.0, "\n提取验证码：" + ret['code'])
+        for temp in ret:
+            tempIndex = format(index, '0.1f')
+            self.init_result_data.insert(tempIndex, "链接地址：" + temp['link'] + "\n")
+            index += 1
+            tempIndex = format(index, '0.1f')
+            self.init_result_data.insert(tempIndex, "提取码：" + temp['code'] + "\n\n")
+            index += 2
+
         self.init_result_data.config(state=DISABLED)
 
 

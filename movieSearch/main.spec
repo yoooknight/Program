@@ -4,7 +4,7 @@ block_cipher = None
 
 
 a = Analysis(['main.py'],
-             pathex=['E:\\program\\python\\movie'],
+             pathex=['D:\\Person\\Git\\Python\\movieSearch'],
              binaries=[],
              datas=[],
              hiddenimports=[],
