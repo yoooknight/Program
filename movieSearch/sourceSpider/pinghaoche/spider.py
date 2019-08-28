@@ -23,16 +23,10 @@ class Spider:
         res = urllib.request.urlopen(req)
         html = res.read().decode('utf8')
 
-        # with open('index.html', 'a', encoding='utf-8') as f:
-        #     f.write(html)
-
-        # 读取爬取下来的网页数据
-        # with open('index.html', encoding='utf-8') as f:
-        #     html = f.read()
-
         # 读取详情页面
         soup = BeautifulSoup(html, 'html.parser')
         try:
+            # 这里只找了第一个链接，所有相当于是查找到相似度最高的一个结果
             detailUrl = soup.find('div', class_='mainleft').find('div', class_='thumbnail').find('a').get('href')
 
             # 获取详情页面
@@ -40,17 +34,10 @@ class Spider:
             detailRes = urllib.request.urlopen(detailReq)
             detailHtml = detailRes.read().decode('utf-8')
 
-            # with open('detail_7.html', 'a', encoding='utf-8') as f:
-            #     f.write(detailHtml)
-
             dic = []
 
+            # 查找所有的a标签
             soup = BeautifulSoup(detailHtml, 'html.parser')
-            # postContent = soup.find("div", id="post_content")
-            # print(h2Content)
-
-            # linkUrl = h2Content.find("a").get("href")
-
             aList = soup.findAll("a")
             linkUrlList = []
             for aTag in aList:
@@ -59,17 +46,8 @@ class Spider:
                 if tempHref and tempHref.find("pan.baidu.com")>=0:
                     linkUrlList.append(tempHref)
 
-            # nn = re.search('提取码\: .{4}', str(postContent) + "提取码: mnxf")
+            # 获取所有的提取码
             codeList = re.findall('((提取码|密码)[\:\：][ ]?.{4})', str(detailHtml))
-            # print(type(str(postContent)))
-            # print(nn)
-            # print(str(postContent))
-            # print(nn.group(1))
-
-            # c = b.split(": ")
-            # linkUrl = c[1].split(" ")[0]
-            # code = c[2].split(" ")[0]
-
             index=0
             for link in linkUrlList:
                 if (index<len(codeList)):

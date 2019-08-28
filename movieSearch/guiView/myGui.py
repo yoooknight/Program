@@ -25,16 +25,11 @@ class myGui:
         scroll.grid(row=1,column=3, sticky=S + W + E + N)
 
         # 查询按钮
-        # lm = init_search_Text.get(1.0, END)
         self.searchButton = Button(self.init_window_name, text="查询", bg='lightblue', command=self.abc)
         self.searchButton.grid(row=0, column=2)
 
     def abc(self):
         search = self.init_search_Text.get(1.0, END)
-
-        # 这里写入的接口没有生效,不明白为什么
-        # with open('wangsong.txt', 'a+') as f:
-        #     f.write("======" + search + "00000000")
 
         a = pingSpider.Spider(search)
         ret = a.getlinkList()
@@ -52,10 +47,6 @@ class myGui:
         else:
             self.init_result_data.insert(1.0, "非常抱歉，没有找到你要的影片")
 
-
-        # for i in list(range(20)):
-        #     tempIndex = format(i, '0.1f')
-        #     self.init_result_data.insert(tempIndex, "lalalla\n")
         self.init_result_data.config(state=DISABLED)
 
 
