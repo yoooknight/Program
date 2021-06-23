@@ -1,0 +1,65 @@
+{% extends 'base.html'%}
+{% block css_source%}
+<link rel = "stylesheet" href = "{{ url_for('static', filename='css/index.css') }}">
+{% endblock%}
+
+{% block content%}
+     <div class="profile">
+               <!--start article header aera--> 
+        <div class="header">
+                    <div class="title">
+                        <h2 class="text-center">简介 | About</h2>
+                    </div>
+                    <div class="time"><br></div>
+                    <div style="clear:both;"></div>
+               </div>
+               
+               <!--start main article aera--> 
+               <div style="border-bottom: none;" class="article">
+                    
+                    <a href="" class="thumbnail">
+                        <img src="" alt="">
+                    </a>
+                        
+                    <h4>自我介绍</h4>
+                    <p class="para">
+                    作者 YoooKnight，三流程序员，二流篮球业余玩家，一流不详==！
+                    </p>
+                    <p class="para"> 
+                    我最开始的博客是基于hexo+github：<a href="http://yoooknight.github.io">YoooKnight's github blog</a>
+                    </p>    
+                    <p class="para"> 
+                    作为php程序员，php是全世界最好的语言毋庸置疑。
+                    </p>
+                    <p class="para"> 
+                    当然，会写一些python，c，技多不压身嘛
+                    </p>
+                    <h4>博客介绍</h4>
+                        
+                    <p class="para">
+                    主要是记录学习的过程中的一些新的。
+                    </p>
+                    <p class="para">
+                    此博客基于：
+                    </p>
+                    
+                    <blockquote>
+                    <p class="para-quote">
+                    环境：Python 2 Flask + slqite3 + bootstrapt 
+                    </p>
+                    <p class="para-quote">
+                    搬瓦工的空间:$2.99/mon的那种
+                    </p>
+                    <p class="para-quote">
+                    由于本人前端太渣了,所以所有页面是参考：<a href = "http://lihancong.cn/">【Tony's Blog】</a> <a href = "http://www.golaravel.com/">【Laravel】</a> 
+                    </p>
+                    </blockquote>
+                    
+                    
+                    <h4>联系方式</h4>
+                    <p class="para">
+                    E-mail: yoooknight@163.com
+                    </p>
+               </div>
+            </div>
+{% endblock %}

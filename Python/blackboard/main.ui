@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>QMainWindow</class>
+ <widget class="QMainWindow" name="QMainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>665</width>
+    <height>577</height>
+   </rect>
+  </property>
+  <property name="cursor">
+   <cursorShape>WaitCursor</cursorShape>
+  </property>
+  <property name="windowTitle">
+   <string>Blackboard</string>
+  </property>
+  <property name="animated">
+   <bool>false</bool>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>570</x>
+      <y>30</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>搜索</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit">
+    <property name="geometry">
+     <rect>
+      <x>440</x>
+      <y>30</y>
+      <width>121</width>
+      <height>20</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTableWidget" name="tableWidget">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>80</y>
+      <width>601</width>
+      <height>191</height>
+     </rect>
+    </property>
+    <property name="cursor" stdset="0">
+     <cursorShape>ArrowCursor</cursorShape>
+    </property>
+    <property name="whatsThis">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;adf &lt;/p&gt;&lt;p&gt;adf&lt;/p&gt;&lt;p&gt;afd&lt;/p&gt;&lt;p&gt;f&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="autoScroll">
+     <bool>false</bool>
+    </property>
+    <property name="showGrid">
+     <bool>true</bool>
+    </property>
+    <property name="sortingEnabled">
+     <bool>false</bool>
+    </property>
+    <property name="wordWrap">
+     <bool>true</bool>
+    </property>
+    <property name="cornerButtonEnabled">
+     <bool>true</bool>
+    </property>
+    <property name="rowCount">
+     <number>2</number>
+    </property>
+    <property name="columnCount">
+     <number>6</number>
+    </property>
+    <attribute name="horizontalHeaderVisible">
+     <bool>false</bool>
+    </attribute>
+    <attribute name="horizontalHeaderHighlightSections">
+     <bool>true</bool>
+    </attribute>
+    <attribute name="verticalHeaderVisible">
+     <bool>false</bool>
+    </attribute>
+    <attribute name="verticalHeaderHighlightSections">
+     <bool>false</bool>
+    </attribute>
+    <row/>
+    <row/>
+    <column/>
+    <column/>
+    <column/>
+    <column/>
+    <column/>
+    <column/>
+    <item row="0" column="0">
+     <property name="text">
+      <string>条形码</string>
+     </property>
+    </item>
+    <item row="0" column="1">
+     <property name="text">
+      <string>产品名称</string>
+     </property>
+    </item>
+    <item row="0" column="2">
+     <property name="text">
+      <string>剩余数量</string>
+     </property>
+    </item>
+    <item row="0" column="3">
+     <property name="text">
+      <string>借出数量</string>
+     </property>
+    </item>
+    <item row="0" column="4">
+     <property name="text">
+      <string>总数</string>
+     </property>
+    </item>
+    <item row="0" column="5">
+     <property name="text">
+      <string>操作</string>
+     </property>
+    </item>
+    <item row="1" column="0">
+     <property name="text">
+      <string>902265501114</string>
+     </property>
+    </item>
+    <item row="1" column="1">
+     <property name="text">
+      <string>春雨面膜</string>
+     </property>
+    </item>
+    <item row="1" column="2">
+     <property name="text">
+      <string>20</string>
+     </property>
+    </item>
+    <item row="1" column="3">
+     <property name="text">
+      <string>10</string>
+     </property>
+    </item>
+    <item row="1" column="4">
+     <property name="text">
+      <string>30</string>
+     </property>
+    </item>
+    <item row="1" column="5">
+     <property name="text">
+      <string>查看 编辑 借出</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QTableWidget" name="tableWidget_2">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>310</y>
+      <width>601</width>
+      <height>192</height>
+     </rect>
+    </property>
+    <property name="inputMethodHints">
+     <set>Qt::ImhNone</set>
+    </property>
+    <property name="verticalScrollMode">
+     <enum>QAbstractItemView::ScrollPerItem</enum>
+    </property>
+    <property name="horizontalScrollMode">
+     <enum>QAbstractItemView::ScrollPerItem</enum>
+    </property>
+    <property name="rowCount">
+     <number>5</number>
+    </property>
+    <property name="columnCount">
+     <number>6</number>
+    </property>
+    <attribute name="horizontalHeaderVisible">
+     <bool>false</bool>
+    </attribute>
+    <attribute name="horizontalHeaderHighlightSections">
+     <bool>true</bool>
+    </attribute>
+    <attribute name="verticalHeaderVisible">
+     <bool>false</bool>
+    </attribute>
+    <row/>
+    <row/>
+    <row/>
+    <row/>
+    <row/>
+    <column/>
+    <column/>
+    <column/>
+    <column/>
+    <column/>
+    <column/>
+    <item row="0" column="0">
+     <property name="text">
+      <string>操作人</string>
+     </property>
+    </item>
+    <item row="0" column="1">
+     <property name="text">
+      <string>借出人</string>
+     </property>
+    </item>
+    <item row="0" column="2">
+     <property name="text">
+      <string>借出数量</string>
+     </property>
+    </item>
+    <item row="0" column="3">
+     <property name="text">
+      <string>用途</string>
+     </property>
+    </item>
+    <item row="0" column="4">
+     <property name="text">
+      <string>操作时间</string>
+     </property>
+    </item>
+    <item row="0" column="5">
+     <property name="text">
+      <string>操作</string>
+     </property>
+    </item>
+    <item row="1" column="0">
+     <property name="text">
+      <string>六角</string>
+     </property>
+    </item>
+    <item row="1" column="1">
+     <property name="text">
+      <string>七月</string>
+     </property>
+    </item>
+    <item row="1" column="2">
+     <property name="text">
+      <string>2</string>
+     </property>
+    </item>
+    <item row="1" column="3">
+     <property name="text">
+      <string>美工拍摄</string>
+     </property>
+    </item>
+    <item row="1" column="4">
+     <property name="text">
+      <string>2020-05-06 16:36</string>
+     </property>
+     <property name="flags">
+      <set>ItemIsSelectable</set>
+     </property>
+    </item>
+    <item row="1" column="5">
+     <property name="text">
+      <string>归还</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>280</y>
+      <width>91</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>借出详细记录：</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_2">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>30</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>导入产品</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_3">
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>30</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>新增产品</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>665</width>
+     <height>23</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

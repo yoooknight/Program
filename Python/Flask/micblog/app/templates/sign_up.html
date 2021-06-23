@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% block content %}
+<div id="loginModal" class="show jumbotron">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="text-center text-primary">注册</h1>
+      </div>
+      <div class="modal-body">
+        <form action="" class="form col-md-12 center-block" method="post" name = "login">
+          {{ form.hidden_tag() }}
+          <div class="form-group">
+            {{ form.user_name(class = "form-control input-lg", placeholder='用户名') }}
+            {% for error in form.errors.user_name %}
+            <span style = "color: red;">[{{ error }}]</span>
+            {% endfor %}
+          </div>
+          <div class="form-group">
+            {{ form.user_email(class = "form-control input-lg", placeholder='邮箱') }}
+            {% for error in form.errors.user_email%}
+            <span style="color:red">[{{ error }}]</span>
+            {% endfor %}
+          </div>
+          <div class="form-group">
+            {{ form.password(class = "form-control input-lg", placeholder='登录密码') }}
+            {% for error in form.errors.password %}
+            <span style="color:red">[{{ error }}]</span>
+            {% endfor %}
+          </div>
+          <div class="form-group">
+            <button class="btn btn-primary btn-lg btn-block">立刻注册</button>
+<!--            <span><a href="#">找回密码</a></span> -->
+          </div>
+          <p><a href="{{ url_for("login") }}" class="pull-right">已有账户?登录</a></p>
+          <p class="pull-left">{{ form.remember_me}} Remember Me?</p>
+        </form>
+      </div>
+      <div class="modal-footer">
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--
+<form action = "/sign-up" method = "POST" name = "sign_up">
+{{ form.hidden_tag() }}
+    <p>Nick name: {{form.user_name}}</p>
+    {% for error in form.errors.user_name%}
+    <p style="color:red;">[-] {{errror}}</p>
+    {% endfor %}
+    <p>E-mail: {{ form.user_email }}</p>
+    {% for error in form.errors.user_email %}
+    <p style="color:red;">[-] {{ error }}</p>
+    {% endfor %}
+
+    <p>{{ form.submit }}</p>
+</form>
+<script>
+    $(function(){
+        $("ul.nav-pills li").eq(2).addClass("active").siblings().removeClass("active")
+    })
+</script>
+-->
+{% endblock %}

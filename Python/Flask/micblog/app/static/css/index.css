@@ -1,0 +1,157 @@
+/* 文章 */
+.main div.time {
+    font-size: 12px;
+    margin-right: 10px;
+    color: #aaa;
+}
+
+.profile h4 {
+    color:#313131;
+    font-size: 26px;
+    margin-left:0;
+    border-bottom: 2px solid #dbdbdb;
+    margin-top: 40px;
+    padding: 10px 0;
+    font-weight: normal;
+}
+.article .profile .header, .profile .article {
+    border-bottom: 1px solid #dbdbdb;
+}
+.profile .title {
+    border-left: 5px solid #ea6753;
+}
+.profile h2 {
+    color:#2ca6cb;
+    padding: 15px 35px;
+    margin: 0;
+    font-size: 30px;
+    font-weight: 300;
+    text-align:  left;
+}
+.profile .time {
+    font-size: 15px;
+    float: right;
+    color: #777;
+    margin-right: 40px;
+    margin-bottom: 10px;
+    padding-top: 5px;
+}
+
+.profile .footer .copyinfo {
+    color: #666;
+    padding: 10px 20px;
+    float: right
+}
+.profile a.ret {
+    display: inline-block;
+    color: #2ca6cb;
+    padding: 6px 10px;
+    font-size: 15px;
+    margin: 10px 0 10px 15px;
+}
+.profile a.ret:hover {
+    background: #2ca6cb;
+    color: #fafafa;
+}
+.profile p.para {
+    font-size: 16px;
+    word-wrap: break-word;
+    margin: 15px 0;
+    line-height: 1.8;
+    color:  #514c4c;
+    padding: 5px 0;
+}
+.profile table.table {
+    color:#514c4c;
+    font-size: 15px;
+}
+.profile table.table td{
+    line-height: 1.5;
+
+}
+
+pre {
+    font-size: 11px;
+    border-radius:3px;
+    border: none;
+    border-bottom: 1px #ccc solid;
+    background: #f1f1f1;
+    letter-spacing: 0;
+}
+@media (min-width: 768px) {
+    pre {
+        font-size: 14px;
+    }
+}
+code.s {
+    border: 1px solid #ddd;
+    font-family:  "Helvetica Neue","微软雅黑",Helvetica,Arial,sans-serif;
+    font-weight: 300;
+}
+.profile blockquote p.para-quote {
+    color: #666;
+    font-size: 14px;
+    text-align: left;
+    word-wrap: break-word;
+}
+.profile blockquote {
+    border-left:  2px solid #f4645f;
+    padding: 6px 15px;
+}
+.profile .article .txt a {
+    color: #2ca6cb;
+    text-decoration: none;
+}
+.profile .article .txt a:hover {
+    color: #f4645f;
+    text-shadow: 0px 0px 10px #f4645f;
+}
+ul.para {
+    word-wrap: break-word;
+    padding-left: 25px;
+    color:  #555;
+    font-size: 16px;
+}
+.profile .thumbnail {
+    background: transparent;
+    border: 1px solid #e5e5e5;
+}
+.profile .article {
+    padding: 10px 35px 35px 35px;
+    margin-bottom: 10px;
+}
+@media (max-width: 768px) {
+    .profile .article {
+        padding: 10px 15px 35px 15px;
+        margin-bottom: 10px;
+    }
+}
+.profile {
+    padding: 0;
+    background: #f8f8f8;
+    margin-bottom: 10px;
+    overflow: hidden;
+    box-shadow: 0px 1px 2px  #aaa;
+    color: #413f3f;
+}
+
+/*脚本*/
+div.main-footer {
+    margin: 20px 0 0 0;
+    background: #222;
+    border-top: 3px #f4645f solid;
+}
+div.main-footer .logo {
+    color: #eee;
+    background: #f4645f;
+    display: inline-block;
+    margin-left: 5%;
+    padding: 8px 16px;
+    font-size: 19px;
+}
+div.main-footer p {
+    margin: 0;
+    padding: 10px 0 6px 15%;
+    color: #ccc;
+    font-size: 20px;
+}

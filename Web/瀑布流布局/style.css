@@ -1,0 +1,5 @@
+*{margin:0;padding:0;}
+#content{margin:0 auto;}
+.box{padding:5px;float:left}
+.box_img{padding:5px;border:1px solid #cccccc;border-radius:circle;box-shadow:0 0 10px green}
+.box_img img{width:150px;height:auto;}

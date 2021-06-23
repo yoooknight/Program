@@ -1,0 +1,143 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">  
+
+        <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href = "{{  url_for('static', filename = "css/screen.css") }}">        
+        <link rel="stylesheet" href = "{{  url_for('static', filename = "css/index.css") }}">        
+        {% block css_source %}{% endblock %}
+        <title>YoooKnight</title>
+        <style>
+            body{ font-family: "microsoft yahei"; /*min-width: 800px;*/ }
+            img{ width: 100%; /*height: 462px;*/ }
+            .navbar{ /*margin-bottom: -10px;*/ }
+            #myppt{ margin-top: -20px; }
+        </style>
+    </head>
+    
+    <body>
+        <header class="main-header" style="background-image: url(http://image.golaravel.com/5/c9/44e1c4e50d55159c65da6a41bc07e.jpg)">
+           <div class="container">
+            <div class="row">
+             <div class="col-xs-12">
+              <h1><span class="hide"></span> YoooKnight's Blog</h1>
+              <img src="{{ url_for('static', filename='images/baner.png') }}" alt="Laravel" class="hide" />
+             </div>
+             <div class="col-xs-12 hidden-xs hidden-sm">
+              <a href="#" class="btn btn-default btn-doc" target="_blank">Linux</a>
+              <a href="#" class="btn btn-default btn-doc" target="_blank">Python</a>
+             </div>
+            </div>
+           </div>
+          </header>
+        
+        
+          <nav class="main-navigation">
+           <div class="container">
+            <div class="row">
+             <div class="col-sm-12">
+              <div class="navbar-header">
+               <span class="nav-toggle-button collapsed" data-toggle="collapse" data-target="#main-menu"><span class="sr-only">Toggle navigation</span> <i class="fa fa-bars"></i></span>
+              </div>
+              <div class="collapse navbar-collapse" id="main-menu">
+               <ul class="menu">
+                <li role="presentation" class = 'pull-left'><a href="{{ url_for('index') }}" title="首页">首页</a></li>
+                <li role="presentation" class = 'pull-left'><a href="{{ url_for('profile') }}" title="关于我">关于我</a></li>
+                <li class="dropdown pull-right">
+                    {% if current_user.id %}
+                    <a href="#" data-toggle="dropdown" class="dropdown-toggle">{{ current_user.nickname}}<strong class="caret"></strong></a>
+                    <ul class="dropdown-menu">
+                        <li> <a href="{{ url_for('publish', user_id = current_user.id) }}">Publish</a> </li>
+                        <li> <a href="{{ url_for('users', user_id = current_user.id) }}">Profile</a> </li>
+                        <li> <a href="{{ url_for('logout') }}">Logout</a> </li>
+                   </ul>
+                   {% else %}
+                   <p><p/>
+                   {% endif %}
+                </li>
+                <!--<li role="presentation"><a href="http://wenda.golaravel.com/" title="问答社区" target="_blank" onclick="_hmt.push(['_trackEvent', 'main-navigation', 'click', '问答社
+        区'])">问答社区</a></li>-->
+               </ul>
+              </div>
+             </div>
+            </div>
+           </div>
+          </nav>
+
+        <div class="container" style="min-height:400">
+        <!--
+            <div class="row clearfix">
+                 <div class="col-md-12 column">
+                     <ul class="nav nav-pills">
+                         <li class="active"><a href='{{ url_for('index')}}'>Home</a></li>
+                         {% if not current_user.id  %}
+                         <li onclick = "chosen(this)"> <a href='{{ url_for('login') }}'>Login</a> </li>
+                         <li> <a href='{{ url_for('sign_up') }}'>Sign UP</a> </li>
+                         {% endif %}
+                         <li class="dropdown pull-right">
+                             {% if current_user.id %}
+                             <a href="#" data-toggle="dropdown" class="dropdown-toggle">{{ current_user.nickname}}<strong class="caret"></strong></a>
+                             <ul class="dropdown-menu">
+                                 <li> <a href="{{ url_for('publish', user_id = current_user.id) }}">Publish</a> </li>
+                                 <li> <a href="{{ url_for('users', user_id = current_user.id) }}">Profile</a> </li>
+                                 <li> <a href="{{ url_for('logout') }}">Logout</a> </li>
+                                 <li> <a href="#">设置栏目</a> </li>
+                                 <li> <a href="#">更多设置</a> </li>
+                                 <li class="divider"> </li>
+                                 <li> <a href="#">分割线</a> </li> 
+                            </ul>
+                            {% else %}
+                            <p><p/>
+                            {% endif %}
+                        </li>
+                    </ul>
+        <div>Microblog:
+            <a href='{{ url_for('index')}}'>Home</a>
+            <a href='{{ url_for('login')}}'>Login</a>
+            <a href='{{ url_for('sign_up')}}'>Sign Up</a>
+            {% if current_user.id %}
+            <a href='{{ url_for('logout')}}'>Logout</a>
+            <a href='{{ url_for('publish', user_id = current_user.id)}}'>publish</a>
+            <a href='{{ url_for('users', user_id = current_user.id)}}'>Profile</a>
+            {% endif %}
+        </div>
+        <hr color='red'>
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <ul>
+        {% for message in messages %}
+            <li>{{ message }}</li>
+        {% endfor %}
+        </ul>
+        {% endif %}
+        {% endwith%}
+                </div>
+            </div>
+        -->
+        {% block content %}{% endblock %}
+        </div> 
+        <div class="main-footer">
+            <div class="container">
+                <div class="logo">
+                YoooKnight BLOG
+                </div>
+                    <p class = "text-center"> 「 YoooKnight's Clone blog 」<br> </p>
+                    <p  class = "text-right"> © 2017 </p>
+            </div>
+            <!--
+                <h5 class="copyright text-right">
+                © 2017 &nbsp;|&nbsp;  湘ICP备16001500号 &nbsp;|&nbsp;
+                    <a href="http://lihancong.cn/blog/schema" class="no-barba no-barba-prefetch">统计</a> &nbsp;|&nbsp;
+                    <a href="http://lihancong.cn/admin" class="no-barba no-barba-prefetch">管理</a>
+                </h5-->
+            </div>
+        <script>
+           function chosen(obj){
+                $(obj).addClass('active')
+            } 
+        </script>
+        {% block js_source %}{% endblock %}
+    </body>
+    
+</html>

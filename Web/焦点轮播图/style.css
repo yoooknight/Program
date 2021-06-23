@@ -1,0 +1,13 @@
+*{margin:0;padding:0;}
+body{padding:20px;}
+#container{width:600px;height:400px;overflow:hidden;position:relative;}
+#list{width:4200px;height:400px;z-index:1;position:absolute;}
+#list img{float:left;}
+#buttons{position:absolute;left:250px;bottom:20px;width:100px;height:10px;z-index:2;}
+#buttons span{cursor:pointer;width:10px;height:10px;border:1px solid #333;border-radius:50%;background:#333;float:left;margin-right:5px;}
+#buttons .on{background:orangered}
+.arrow{display:none;position:absolute;top:200px;z-index:2;width:40px;height:40px;font-size:36px;background:rgba(0,0,0,.3);color:#fff;text-align:center;text-decoration:none;line-height:40px;}
+.arrow:hover{background:rgba(0,0,0,.7)}
+#prev{left:20px;}
+#next{right:20px;}
+#container:hover .arrow{display:block}

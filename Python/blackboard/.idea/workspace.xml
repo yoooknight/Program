@@ -1,0 +1,828 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="61f1a9d6-8c3d-46bc-9822-3dd0b9088254" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/blackboard.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/blackboard.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/=w.spec" beforeDir="false" afterPath="$PROJECT_DIR$/=w.spec" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/borrow.py" beforeDir="false" afterPath="$PROJECT_DIR$/borrow.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/borrow.ui" beforeDir="false" afterPath="$PROJECT_DIR$/borrow.ui" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/borrowDrive.py" beforeDir="false" afterPath="$PROJECT_DIR$/borrowDrive.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test/Analysis-00.toc" beforeDir="false" afterPath="$PROJECT_DIR$/build/test/Analysis-00.toc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test/EXE-00.toc" beforeDir="false" afterPath="$PROJECT_DIR$/build/test/EXE-00.toc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test/PKG-00.pkg" beforeDir="false" afterPath="$PROJECT_DIR$/build/test/PKG-00.pkg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test/PKG-00.toc" beforeDir="false" afterPath="$PROJECT_DIR$/build/test/PKG-00.toc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test/PYZ-00.pyz" beforeDir="false" afterPath="$PROJECT_DIR$/build/test/PYZ-00.pyz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test/PYZ-00.toc" beforeDir="false" afterPath="$PROJECT_DIR$/build/test/PYZ-00.toc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test/base_library.zip" beforeDir="false" afterPath="$PROJECT_DIR$/build/test/base_library.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test/test.exe.manifest" beforeDir="false" afterPath="$PROJECT_DIR$/build/test/test.exe.manifest" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test/warn-test.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/test/warn-test.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test/xref-test.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/test/xref-test.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/databaseHandle.py" beforeDir="false" afterPath="$PROJECT_DIR$/databaseHandle.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/blackboard.db" beforeDir="false" afterPath="$PROJECT_DIR$/dist/blackboard.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/test.exe" beforeDir="false" afterPath="$PROJECT_DIR$/dist/test.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/editBroductDrive.py" beforeDir="false" afterPath="$PROJECT_DIR$/editBroductDrive.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/editProduct.py" beforeDir="false" afterPath="$PROJECT_DIR$/editProduct.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Autoloader.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Autoloader.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/CachedObjectStorage/APC.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/CachedObjectStorage/APC.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/CachedObjectStorage/CacheBase.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/CachedObjectStorage/CacheBase.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/CachedObjectStorage/DiscISAM.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/CachedObjectStorage/DiscISAM.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/CachedObjectStorage/ICache.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/CachedObjectStorage/ICache.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/CachedObjectStorage/Igbinary.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/CachedObjectStorage/Igbinary.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/CachedObjectStorage/Memcache.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/CachedObjectStorage/Memcache.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/CachedObjectStorage/Memory.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/CachedObjectStorage/Memory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/CachedObjectStorage/MemoryGZip.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/CachedObjectStorage/MemoryGZip.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/CachedObjectStorage/MemorySerialized.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/CachedObjectStorage/MemorySerialized.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/CachedObjectStorage/PHPTemp.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/CachedObjectStorage/PHPTemp.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/CachedObjectStorage/SQLite.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/CachedObjectStorage/SQLite.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/CachedObjectStorage/SQLite3.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/CachedObjectStorage/SQLite3.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/CachedObjectStorage/Wincache.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/CachedObjectStorage/Wincache.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/CachedObjectStorageFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/CachedObjectStorageFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/CalcEngine/CyclicReferenceStack.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/CalcEngine/CyclicReferenceStack.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/CalcEngine/Logger.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/CalcEngine/Logger.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Calculation.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Calculation.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Calculation/Database.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Calculation/Database.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Calculation/DateTime.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Calculation/DateTime.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Calculation/Engineering.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Calculation/Engineering.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Calculation/Exception.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Calculation/Exception.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Calculation/ExceptionHandler.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Calculation/ExceptionHandler.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Calculation/Financial.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Calculation/Financial.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Calculation/FormulaParser.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Calculation/FormulaParser.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Calculation/FormulaToken.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Calculation/FormulaToken.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Calculation/Function.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Calculation/Function.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Calculation/Functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Calculation/Functions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Calculation/Logical.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Calculation/Logical.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Calculation/LookupRef.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Calculation/LookupRef.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Calculation/MathTrig.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Calculation/MathTrig.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Calculation/Statistical.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Calculation/Statistical.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Calculation/TextData.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Calculation/TextData.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Calculation/Token/Stack.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Calculation/Token/Stack.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Calculation/functionlist.txt" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Calculation/functionlist.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Cell.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Cell.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Cell/AdvancedValueBinder.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Cell/AdvancedValueBinder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Cell/DataType.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Cell/DataType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Cell/DataValidation.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Cell/DataValidation.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Cell/DefaultValueBinder.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Cell/DefaultValueBinder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Cell/Hyperlink.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Cell/Hyperlink.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Cell/IValueBinder.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Cell/IValueBinder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Chart.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Chart.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Chart/Axis.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Chart/Axis.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Chart/DataSeries.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Chart/DataSeries.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Chart/DataSeriesValues.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Chart/DataSeriesValues.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Chart/Exception.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Chart/Exception.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Chart/GridLines.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Chart/GridLines.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Chart/Layout.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Chart/Layout.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Chart/Legend.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Chart/Legend.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Chart/PlotArea.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Chart/PlotArea.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Chart/Properties.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Chart/Properties.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Chart/Renderer/PHP Charting Libraries.txt" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Chart/Renderer/PHP Charting Libraries.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Chart/Renderer/jpgraph.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Chart/Renderer/jpgraph.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Chart/Title.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Chart/Title.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Comment.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Comment.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/DocumentProperties.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/DocumentProperties.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/DocumentSecurity.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/DocumentSecurity.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Exception.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Exception.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/HashTable.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/HashTable.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Helper/HTML.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Helper/HTML.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/IComparable.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/IComparable.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/IOFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/IOFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/NamedRange.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/NamedRange.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Reader/Abstract.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Reader/Abstract.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Reader/CSV.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Reader/CSV.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Reader/DefaultReadFilter.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Reader/DefaultReadFilter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Reader/Excel2003XML.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Reader/Excel2003XML.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Reader/Excel2007.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Reader/Excel2007.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Reader/Excel2007/Chart.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Reader/Excel2007/Chart.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Reader/Excel2007/Theme.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Reader/Excel2007/Theme.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Reader/Excel5.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Reader/Excel5.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Reader/Excel5/Color.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Reader/Excel5/Color.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Reader/Excel5/Color/BIFF5.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Reader/Excel5/Color/BIFF5.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Reader/Excel5/Color/BIFF8.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Reader/Excel5/Color/BIFF8.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Reader/Excel5/Color/BuiltIn.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Reader/Excel5/Color/BuiltIn.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Reader/Excel5/ErrorCode.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Reader/Excel5/ErrorCode.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Reader/Excel5/Escher.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Reader/Excel5/Escher.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Reader/Excel5/MD5.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Reader/Excel5/MD5.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Reader/Excel5/RC4.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Reader/Excel5/RC4.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Reader/Excel5/Style/Border.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Reader/Excel5/Style/Border.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Reader/Excel5/Style/FillPattern.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Reader/Excel5/Style/FillPattern.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Reader/Exception.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Reader/Exception.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Reader/Gnumeric.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Reader/Gnumeric.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Reader/HTML.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Reader/HTML.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Reader/IReadFilter.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Reader/IReadFilter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Reader/IReader.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Reader/IReader.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Reader/OOCalc.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Reader/OOCalc.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Reader/SYLK.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Reader/SYLK.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/ReferenceHelper.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/ReferenceHelper.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/RichText.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/RichText.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/RichText/ITextElement.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/RichText/ITextElement.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/RichText/Run.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/RichText/Run.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/RichText/TextElement.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/RichText/TextElement.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Settings.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Settings.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Shared/CodePage.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Shared/CodePage.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Shared/Date.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Shared/Date.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Shared/Drawing.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Shared/Drawing.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Shared/Escher.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Shared/Escher.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Shared/Escher/DgContainer.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Shared/Escher/DgContainer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Shared/Escher/DgContainer/SpgrContainer.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Shared/Escher/DgContainer/SpgrContainer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Shared/Escher/DgContainer/SpgrContainer/SpContainer.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Shared/Escher/DgContainer/SpgrContainer/SpContainer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Shared/Escher/DggContainer.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Shared/Escher/DggContainer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Shared/Escher/DggContainer/BstoreContainer.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Shared/Escher/DggContainer/BstoreContainer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Shared/Escher/DggContainer/BstoreContainer/BSE.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Shared/Escher/DggContainer/BstoreContainer/BSE.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Shared/Escher/DggContainer/BstoreContainer/BSE/Blip.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Shared/Escher/DggContainer/BstoreContainer/BSE/Blip.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Shared/Excel5.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Shared/Excel5.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Shared/File.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Shared/File.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Shared/Font.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Shared/Font.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Shared/JAMA/CHANGELOG.TXT" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Shared/JAMA/CHANGELOG.TXT" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Shared/JAMA/CholeskyDecomposition.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Shared/JAMA/CholeskyDecomposition.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Shared/JAMA/EigenvalueDecomposition.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Shared/JAMA/EigenvalueDecomposition.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Shared/JAMA/LUDecomposition.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Shared/JAMA/LUDecomposition.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Shared/JAMA/Matrix.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Shared/JAMA/Matrix.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Shared/JAMA/QRDecomposition.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Shared/JAMA/QRDecomposition.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Shared/JAMA/SingularValueDecomposition.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Shared/JAMA/SingularValueDecomposition.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Shared/JAMA/utils/Error.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Shared/JAMA/utils/Error.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Shared/JAMA/utils/Maths.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Shared/JAMA/utils/Maths.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Shared/OLE.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Shared/OLE.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Shared/OLE/ChainedBlockStream.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Shared/OLE/ChainedBlockStream.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Shared/OLE/PPS.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Shared/OLE/PPS.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Shared/OLE/PPS/File.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Shared/OLE/PPS/File.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Shared/OLE/PPS/Root.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Shared/OLE/PPS/Root.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Shared/OLERead.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Shared/OLERead.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Shared/PCLZip/gnu-lgpl.txt" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Shared/PCLZip/gnu-lgpl.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Shared/PCLZip/pclzip.lib.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Shared/PCLZip/pclzip.lib.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Shared/PCLZip/readme.txt" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Shared/PCLZip/readme.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Shared/PasswordHasher.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Shared/PasswordHasher.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Shared/String.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Shared/String.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Shared/TimeZone.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Shared/TimeZone.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Shared/XMLWriter.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Shared/XMLWriter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Shared/ZipArchive.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Shared/ZipArchive.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Shared/ZipStreamWrapper.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Shared/ZipStreamWrapper.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Shared/trend/bestFitClass.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Shared/trend/bestFitClass.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Shared/trend/exponentialBestFitClass.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Shared/trend/exponentialBestFitClass.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Shared/trend/linearBestFitClass.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Shared/trend/linearBestFitClass.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Shared/trend/logarithmicBestFitClass.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Shared/trend/logarithmicBestFitClass.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Shared/trend/polynomialBestFitClass.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Shared/trend/polynomialBestFitClass.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Shared/trend/powerBestFitClass.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Shared/trend/powerBestFitClass.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Shared/trend/trendClass.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Shared/trend/trendClass.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Style.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Style.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Style/Alignment.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Style/Alignment.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Style/Border.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Style/Border.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Style/Borders.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Style/Borders.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Style/Color.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Style/Color.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Style/Conditional.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Style/Conditional.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Style/Fill.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Style/Fill.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Style/Font.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Style/Font.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Style/NumberFormat.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Style/NumberFormat.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Style/Protection.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Style/Protection.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Style/Supervisor.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Style/Supervisor.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Worksheet.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Worksheet.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Worksheet/AutoFilter.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Worksheet/AutoFilter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Worksheet/AutoFilter/Column.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Worksheet/AutoFilter/Column.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Worksheet/AutoFilter/Column/Rule.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Worksheet/AutoFilter/Column/Rule.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Worksheet/BaseDrawing.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Worksheet/BaseDrawing.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Worksheet/CellIterator.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Worksheet/CellIterator.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Worksheet/Column.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Worksheet/Column.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Worksheet/ColumnCellIterator.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Worksheet/ColumnCellIterator.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Worksheet/ColumnDimension.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Worksheet/ColumnDimension.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Worksheet/ColumnIterator.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Worksheet/ColumnIterator.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Worksheet/Dimension.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Worksheet/Dimension.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Worksheet/Drawing.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Worksheet/Drawing.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Worksheet/Drawing/Shadow.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Worksheet/Drawing/Shadow.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Worksheet/HeaderFooter.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Worksheet/HeaderFooter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Worksheet/HeaderFooterDrawing.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Worksheet/HeaderFooterDrawing.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Worksheet/MemoryDrawing.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Worksheet/MemoryDrawing.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Worksheet/PageMargins.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Worksheet/PageMargins.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Worksheet/PageSetup.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Worksheet/PageSetup.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Worksheet/Protection.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Worksheet/Protection.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Worksheet/Row.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Worksheet/Row.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Worksheet/RowCellIterator.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Worksheet/RowCellIterator.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Worksheet/RowDimension.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Worksheet/RowDimension.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Worksheet/RowIterator.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Worksheet/RowIterator.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Worksheet/SheetView.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Worksheet/SheetView.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/WorksheetIterator.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/WorksheetIterator.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Writer/Abstract.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Writer/Abstract.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Writer/CSV.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Writer/CSV.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Writer/Excel2007.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Writer/Excel2007.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Writer/Excel2007/Chart.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Writer/Excel2007/Chart.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Writer/Excel2007/Comments.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Writer/Excel2007/Comments.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Writer/Excel2007/ContentTypes.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Writer/Excel2007/ContentTypes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Writer/Excel2007/DocProps.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Writer/Excel2007/DocProps.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Writer/Excel2007/Drawing.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Writer/Excel2007/Drawing.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Writer/Excel2007/Rels.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Writer/Excel2007/Rels.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Writer/Excel2007/RelsRibbon.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Writer/Excel2007/RelsRibbon.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Writer/Excel2007/RelsVBA.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Writer/Excel2007/RelsVBA.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Writer/Excel2007/StringTable.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Writer/Excel2007/StringTable.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Writer/Excel2007/Style.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Writer/Excel2007/Style.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Writer/Excel2007/Theme.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Writer/Excel2007/Theme.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Writer/Excel2007/Workbook.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Writer/Excel2007/Workbook.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Writer/Excel2007/Worksheet.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Writer/Excel2007/Worksheet.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Writer/Excel2007/WriterPart.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Writer/Excel2007/WriterPart.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Writer/Excel5.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Writer/Excel5.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Writer/Excel5/BIFFwriter.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Writer/Excel5/BIFFwriter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Writer/Excel5/Escher.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Writer/Excel5/Escher.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Writer/Excel5/Font.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Writer/Excel5/Font.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Writer/Excel5/Parser.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Writer/Excel5/Parser.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Writer/Excel5/Workbook.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Writer/Excel5/Workbook.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Writer/Excel5/Worksheet.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Writer/Excel5/Worksheet.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Writer/Excel5/Xf.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Writer/Excel5/Xf.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Writer/Exception.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Writer/Exception.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Writer/HTML.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Writer/HTML.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Writer/IWriter.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Writer/IWriter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Writer/OpenDocument.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Writer/OpenDocument.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Writer/OpenDocument/Cell/Comment.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Writer/OpenDocument/Cell/Comment.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Writer/OpenDocument/Content.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Writer/OpenDocument/Content.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Writer/OpenDocument/Meta.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Writer/OpenDocument/Meta.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Writer/OpenDocument/MetaInf.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Writer/OpenDocument/MetaInf.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Writer/OpenDocument/Mimetype.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Writer/OpenDocument/Mimetype.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Writer/OpenDocument/Settings.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Writer/OpenDocument/Settings.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Writer/OpenDocument/Styles.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Writer/OpenDocument/Styles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Writer/OpenDocument/Thumbnails.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Writer/OpenDocument/Thumbnails.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Writer/OpenDocument/WriterPart.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Writer/OpenDocument/WriterPart.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Writer/PDF.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Writer/PDF.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Writer/PDF/Core.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Writer/PDF/Core.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Writer/PDF/DomPDF.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Writer/PDF/DomPDF.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Writer/PDF/mPDF.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Writer/PDF/mPDF.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/Writer/PDF/tcPDF.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/Writer/PDF/tcPDF.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/locale/bg/config" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/locale/bg/config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/locale/cs/config" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/locale/cs/config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/locale/cs/functions" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/locale/cs/functions" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/locale/da/config" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/locale/da/config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/locale/da/functions" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/locale/da/functions" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/locale/de/config" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/locale/de/config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/locale/de/functions" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/locale/de/functions" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/locale/en/uk/config" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/locale/en/uk/config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/locale/es/config" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/locale/es/config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/locale/es/functions" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/locale/es/functions" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/locale/fi/config" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/locale/fi/config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/locale/fi/functions" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/locale/fi/functions" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/locale/fr/config" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/locale/fr/config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/locale/fr/functions" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/locale/fr/functions" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/locale/hu/config" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/locale/hu/config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/locale/hu/functions" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/locale/hu/functions" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/locale/it/config" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/locale/it/config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/locale/it/functions" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/locale/it/functions" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/locale/nl/config" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/locale/nl/config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/locale/nl/functions" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/locale/nl/functions" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/locale/no/config" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/locale/no/config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/locale/no/functions" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/locale/no/functions" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/locale/pl/config" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/locale/pl/config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/locale/pl/functions" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/locale/pl/functions" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/locale/pt/br/config" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/locale/pt/br/config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/locale/pt/br/functions" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/locale/pt/br/functions" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/locale/pt/config" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/locale/pt/config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/locale/pt/functions" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/locale/pt/functions" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/locale/ru/config" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/locale/ru/config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/locale/ru/functions" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/locale/ru/functions" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/locale/sv/config" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/locale/sv/config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/locale/sv/functions" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/locale/sv/functions" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/locale/tr/config" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/locale/tr/config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/Classes/PHPExcel/locale/tr/functions" beforeDir="false" afterPath="$PROJECT_DIR$/import/Classes/PHPExcel/locale/tr/functions" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/importExcel.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/importExcel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import/insert.sql" beforeDir="false" afterPath="$PROJECT_DIR$/import/insert.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.ui" beforeDir="false" afterPath="$PROJECT_DIR$/main.ui" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mainUi.py" beforeDir="false" afterPath="$PROJECT_DIR$/mainUi.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/newProduct.py" beforeDir="false" afterPath="$PROJECT_DIR$/newProduct.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/newProduct.ui" beforeDir="false" afterPath="$PROJECT_DIR$/newProduct.ui" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/newProductDrive.py" beforeDir="false" afterPath="$PROJECT_DIR$/newProductDrive.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/productList.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/productList.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/software/blackboard_v1.exe" beforeDir="false" afterPath="$PROJECT_DIR$/software/blackboard_v1.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/software/blackboard_v2.exe" beforeDir="false" afterPath="$PROJECT_DIR$/software/blackboard_v2.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/software/blackboard_v3.exe" beforeDir="false" afterPath="$PROJECT_DIR$/software/blackboard_v3.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/software/blackboard_v4.exe" beforeDir="false" afterPath="$PROJECT_DIR$/software/blackboard_v4.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.spec" beforeDir="false" afterPath="$PROJECT_DIR$/test.spec" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/需求.txt" beforeDir="false" afterPath="$PROJECT_DIR$/需求.txt" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/blackboard$test.coverage" NAME="test Coverage Results" MODIFIED="1591005197540" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="blackboard" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="266">
+              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+              <folding>
+                <element signature="e#0#30#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/borrow.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="242">
+              <caret line="84" column="18" selection-start-line="84" selection-start-column="18" selection-end-line="84" selection-end-column="18" />
+              <folding>
+                <element signature="e#196#238#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/newProduct.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1349">
+              <caret line="71" column="16" selection-start-line="71" selection-start-column="16" selection-end-line="71" selection-end-column="16" />
+              <folding>
+                <element signature="e#200#242#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/editProduct.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="988">
+              <caret line="52" column="57" selection-start-line="52" selection-start-column="57" selection-end-line="52" selection-end-column="57" />
+              <folding>
+                <element signature="e#200#242#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/newProductDrive.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="76">
+              <caret line="4" column="36" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
+              <folding>
+                <element signature="e#0#33#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/databaseHandle.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1330">
+              <caret line="70" column="47" selection-start-line="70" selection-start-column="47" selection-end-line="70" selection-end-column="47" />
+              <folding>
+                <element signature="e#0#14#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mainUi.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="242">
+              <caret line="111" column="34" lean-forward="true" selection-start-line="111" selection-start-column="34" selection-end-line="111" selection-end-column="34" />
+              <folding>
+                <element signature="e#197#234#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/borrowDrive.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="152">
+              <caret line="8" column="29" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
+              <folding>
+                <element signature="e#0#28#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/editBroductDrive.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="114">
+              <caret line="7" column="24" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>/</find>
+      <find>label_</find>
+      <find>line</find>
+      <find>upDATEpRO</find>
+      <find>上一页</find>
+      <find>getProdu</find>
+      <find>math.ceil</find>
+      <find>update</find>
+      <find>updateProduct</find>
+      <find>borrow</find>
+      <find>updateProductListData</find>
+      <find>limit</find>
+      <find>return</find>
+      <find>updateProductRecordData</find>
+      <find>下一页</find>
+      <find>显示借出产品</find>
+      <find>isBo</find>
+      <find>showALL</find>
+      <find>显示借出</find>
+      <find>total</find>
+      <find>显示</find>
+      <find>归还</find>
+      <find>新增</find>
+      <find>Ui_Dialog3</find>
+      <find>编辑</find>
+      <find>edit_prod</find>
+      <find>lineEdit</find>
+      <find>借出</find>
+      <find>搜索</find>
+      <find>setProductListCount</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>BorrowWindow</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/untitled.py" />
+        <option value="$PROJECT_DIR$/.idea/model.py" />
+        <option value="$PROJECT_DIR$/model.py" />
+        <option value="$PROJECT_DIR$/newProduct.py" />
+        <option value="$PROJECT_DIR$/newProductDrive.py" />
+        <option value="$PROJECT_DIR$/test.py" />
+        <option value="$PROJECT_DIR$/borrowDrive.py" />
+        <option value="$PROJECT_DIR$/a.py" />
+        <option value="$PROJECT_DIR$/databaseHandle.py" />
+        <option value="$PROJECT_DIR$/editProduct.py" />
+        <option value="$PROJECT_DIR$/editBroductDrive.py" />
+        <option value="$PROJECT_DIR$/borrow.py" />
+        <option value="$PROJECT_DIR$/mainUi.py" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="1592" />
+    <option name="y" value="-8" />
+    <option name="width" value="1616" />
+    <option name="height" value="876" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="blackboard" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blackboard" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1591005213947" />
+    <property name="go.gopath.indexing.explicitly.defined" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.3" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\program\python\blackboard" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\admin\AppData\Local\Programs\Python\Python37\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.test" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="61f1a9d6-8c3d-46bc-9822-3dd0b9088254" name="Default Changelist" comment="" />
+      <created>1588750844176</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1588750844176</updated>
+      <workItem from="1588750857296" duration="96000" />
+      <workItem from="1588750971983" duration="5776000" />
+      <workItem from="1588758258065" duration="2221000" />
+      <workItem from="1588813600171" duration="10018000" />
+      <workItem from="1588830476629" duration="94000" />
+      <workItem from="1588830580206" duration="12313000" />
+      <workItem from="1588900312968" duration="6644000" />
+      <workItem from="1588987286510" duration="25263000" />
+      <workItem from="1589159052428" duration="3240000" />
+      <workItem from="1589168251813" duration="5430000" />
+      <workItem from="1589181882524" duration="5443000" />
+      <workItem from="1589189600835" duration="1285000" />
+      <workItem from="1589419969281" duration="53000" />
+      <workItem from="1590543711232" duration="6665000" />
+      <workItem from="1590652958396" duration="2502000" />
+      <workItem from="1590714289993" duration="597000" />
+      <workItem from="1590976955234" duration="7271000" />
+      <workItem from="1590989288437" duration="14114000" />
+      <workItem from="1591005145772" duration="181000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="109206000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="1592" y="-8" width="1616" height="876" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6280323" visible="true" weight="0.19794345" />
+      <window_info id="Structure" order="1" sideWeight="0.37196764" side_tool="true" visible="true" weight="0.19794345" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" sideWeight="0.3694779" side_tool="true" weight="0.19280206" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32884097" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.29514825" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39892185" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32884097" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32884097" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.32614556" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Theme Preview" order="4" />
+      <window_info anchor="right" id="Maven" order="5" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="SciView" order="8" />
+      <window_info anchor="right" id="Database" order="9" weight="0.3295129" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/untitled.py" />
+    <entry file="file://$PROJECT_DIR$/a.py" />
+    <entry file="file://$PROJECT_DIR$/newProduct.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1349">
+          <caret line="71" column="16" selection-start-line="71" selection-start-column="16" selection-end-line="71" selection-end-column="16" />
+          <folding>
+            <element signature="e#200#242#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/editProduct.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="988">
+          <caret line="52" column="57" selection-start-line="52" selection-start-column="57" selection-end-line="52" selection-end-column="57" />
+          <folding>
+            <element signature="e#200#242#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/newProductDrive.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="36" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#33#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/databaseHandle.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1330">
+          <caret line="70" column="47" selection-start-line="70" selection-start-column="47" selection-end-line="70" selection-end-column="47" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/borrowDrive.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="29" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/editBroductDrive.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="7" column="24" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/borrow.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="84" column="18" selection-start-line="84" selection-start-column="18" selection-end-line="84" selection-end-column="18" />
+          <folding>
+            <element signature="e#196#238#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mainUi.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="111" column="34" lean-forward="true" selection-start-line="111" selection-start-column="34" selection-end-line="111" selection-end-column="34" />
+          <folding>
+            <element signature="e#197#234#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.3" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.3" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Python 3.7 interpreter library</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.3" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>Python 3.7</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.3" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>blackboard</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.3" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.3" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

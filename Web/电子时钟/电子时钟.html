@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		body{background:url(img/bg.png);color:white;font-size:50px}
+		div{text-align:center;margin-top:200px;}
+	</style>
+	<script>
+		function toDou(n)
+		{
+			if(n<10)
+				return "0"+n;
+			else
+				return ""+n;
+		}
+		function click()
+		{
+			var t=new Date();
+			str=toDou(t.getHours())+toDou(t.getMinutes())+toDou(t.getSeconds())
+			var aImg=document.getElementsByTagName("img")
+			for(var i=0;i<aImg.length;i++)
+			{
+				aImg[i].src="img/"+str.charAt(i)+".png";
+			}
+		}
+		window.onload=function()
+		{
+			click();
+			setInterval(function(){click();},1000)
+		}
+	</script>
+</head>
+<body>
+	<div>
+		<img src="img/0.png">
+		<img src="img/0.png">
+		:
+		<img src="img/0.png">
+		<img src="img/0.png">
+		:
+		<img src="img/0.png">
+		<img src="img/0.png">
+	</div>
+</body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		body{background:url(img/bg.png);color:white;font-size:50px}
+		div{text-align:center;margin-top:200px;}
+	</style>
+	<script>
+		function toDou(n)
+		{
+			if(n<10)
+				return "0"+n;
+			else
+				return ""+n;
+		}
+		function click()
+		{
+			var t=new Date();
+			str=toDou(t.getHours())+toDou(t.getMinutes())+toDou(t.getSeconds())
+			var aImg=document.getElementsByTagName("img")
+			for(var i=0;i<aImg.length;i++)
+			{
+				aImg[i].src="img/"+str.charAt(i)+".png";
+			}
+		}
+		window.onload=function()
+		{
+			click();
+			setInterval(function(){click();},1000)
+		}
+	</script>
+</head>
+<body>
+	<div>
+		<img src="img/0.png">
+		<img src="img/0.png">
+		:
+		<img src="img/0.png">
+		<img src="img/0.png">
+		:
+		<img src="img/0.png">
+		<img src="img/0.png">
+	</div>
+</body>
+</html>

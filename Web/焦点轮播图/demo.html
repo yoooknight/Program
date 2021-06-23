@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css" type="text/css">
+	<script>
+		window.onload=function()
+		{
+			var oContainer=document.getElementById("container");
+			var oList=document.getElementById("list");
+			var aBtn=document.getElementById("buttons").getElementsByTagName("span");
+			var oPrev=document.getElementById("prev");
+			var oNext=document.getElementById("next");
+			var index=1;
+			var animated=false;
+			var timer;
+			oContainer.onmouseout=function(){play();}
+			oContainer.onmouseover=function(){stop();}
+
+			function showButtons(index)
+			{
+				for(var i=0;i<aBtn.length;i++)
+				{
+					aBtn[i].className="";
+				}
+				aBtn[index-1].className="on";
+			}
+			function animate(dis)
+			{
+				animated=true;
+				var newLeft=oList.offsetLeft+dis;
+				var time=300; //总共需要花费的时间
+				var interval=10;//位移间隔时间
+				var speed=dis/(time/interval);
+				
+				function go()
+				{
+					if((speed<0&&oList.offsetLeft>newLeft)||(speed>0&&oList.offsetLeft<newLeft))
+					{
+						oList.style.left=oList.offsetLeft+speed+"px";
+						setTimeout(function(){go();},interval);
+					}
+					else
+					{
+						animated=false;
+						oList.style.left=newLeft+"px";
+						if(oList.offsetLeft>-600)
+							{oList.style.left=-3000+"px";}
+						if(oList.offsetLeft<-3000)
+							{oList.style.left=-600+"px";}
+					}
+				}
+				go();
+			}
+			function play()
+			{
+				timer=setInterval(function()
+					{
+						oNext.onclick();
+					},2000)
+			}
+			function stop()
+			{
+				clearInterval(timer);
+			}
+			oPrev.onclick=function()
+			{
+				index-=1;
+				if(index<1){index=5;}
+				showButtons(index);
+				if(!animated)
+				{
+					animate(600);
+				}
+			}
+			oNext.onclick=function()
+			{
+				index+=1;
+				if(index>5){index=1;}
+				showButtons(index);
+				if(!animated)
+				{
+					animate(-600);
+				}
+			}
+
+			for(var i=0;i<aBtn.length;i++)
+			{
+				aBtn[i].onclick=function()
+				{
+					var newIndex=parseInt(this.getAttribute('index'));
+					//优化
+					if(newIndex==index)
+					{return;}
+					var dis=-600*(newIndex-index);
+					animate(dis);
+					index=newIndex;
+					// console.log(newIndex);
+					console.log(oList.offsetLeft);
+					showButtons(newIndex);
+				}
+			}
+		}
+	</script>
+</head>
+<body>
+	<div id="container">
+		<div id="list" style="left:-600px">
+			<img src="img/5.jpg" alt="1">
+			<img src="img/1.jpg" alt="1">
+			<img src="img/2.jpg" alt="2">
+			<img src="img/3.jpg" alt="3">
+			<img src="img/4.jpg" alt="4">
+			<img src="img/5.jpg" alt="5">
+			<img src="img/1.jpg" alt="5">
+		</div>
+		<div id="buttons">
+			<span index="1" class="on"></span>
+			<span index="2"></span>
+			<span index="3"></span>
+			<span index="4"></span>
+			<span index="5"></span>
+		</div>
+		<div>
+			<a href="#" id="prev" class="arrow">&lt;</a>
+			<a href="#" id="next" class="arrow">&gt;</a>
+		</div>
+	</div>
+</body>
+</html>

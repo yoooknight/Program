@@ -1,0 +1,22 @@
+{% extends 'base.html'%}
+{% block content %}
+      <article class="post">
+       <header class="post-head">
+        <h1 class="post-title">{{ post.title }}</h1>
+        <section class="post-meta">
+         <span class="author">作者：<a href="https://www.bootcss.com/" target="_blank">{{ post.author.nickname }}</a></span> • 
+         <time class="post-date" datetime="2017年01月24日" title="2017年01月24日">{{ post.timestamp.strftime("%d %b %Y %H:%M:%S") }}</time>
+        </section>
+       </header>
+       <section class="featured-media">
+        <!--img src="Laravel%205.4%20%E7%89%88%E6%9C%AC%E6%AD%A3%E5%BC%8F%E5%8F%91%E5%B8%83_files/7a406073b512ef16a891127824c7b.jpg" alt="Laravel 5.4 版本正式发布" /-->
+       </section>
+
+       <section class="post-content">
+        {{post.body|neomarkdown|safe}}
+       </section>
+
+
+       <footer class="post-footer clearfix"></footer>
+      </article>
+{% endblock %}

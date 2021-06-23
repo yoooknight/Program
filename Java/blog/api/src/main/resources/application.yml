@@ -1,0 +1,13 @@
+server:
+  port: 8445
+
+spring:
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/yooblog
+    username: root
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
+    initialization-mode: always
+  jpa:
+    hibernate:
+      ddl-auto: none

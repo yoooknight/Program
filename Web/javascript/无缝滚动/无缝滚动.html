@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{		
+			margin:0;
+			padding:0;
+		}
+		#div1
+		{	
+			margin:200px auto;
+			width:728px;
+			height:108px;
+			position:relative;
+			background:aqua;
+			overflow:hidden;
+		}
+		#div1 ul
+		{
+			position:absolute;
+			left:0px;
+			top:0;
+		}
+		#div1 ul li
+		{
+			width:178px;
+			height:108px;
+			float:left;
+			list-style:none;
+		}
+	</style>
+	<script>
+	window.onload=function()
+	{
+		var speed=-2;
+		var oDiv=document.getElementById("div1");
+		var oUl=oDiv.getElementsByTagName("ul")[0];
+		var aLi=oUl.getElementsByTagName("li");
+		oUl.innerHTML=oUl.innerHTML+oUl.innerHTML;
+		oUl.style.width=aLi.length*aLi[0].offsetWidth+"px";
+		{
+			oUl.style.left="0";
+		}
+		function move()
+		{		
+				if(oUl.offsetLeft<-oUl.offsetWidth/2)
+				{
+					oUl.style.left="0";
+				}
+				if(oUl.offsetLeft>0)
+				{
+					oUl.style.left=-oUl.offsetWidth/2+"px";
+				}
+				oUl.style.left=oUl.offsetLeft+speed+"px";		
+		}
+		timer=setInterval(move,30);
+		oUl.onmouseover=function()
+		{
+			clearInterval(timer);
+		}
+		oUl.onmouseout=function()
+		{
+			timer=setInterval(move,30);
+		}
+		document.getElementsByTagName("input")[0].onclick=function()
+		{
+			speed=-2;
+		};
+		document.getElementsByTagName("input")[1].onclick=function()
+		{
+			speed=2;
+		};
+	};
+	</script>
+</head>
+<body>
+	<input type="button" value="向左">
+	<input type="button" value="向右">
+	<div id="div1">
+		<ul>
+			<li><img src="img/1.jpg"></li>
+			<li><img src="img/2.jpg"></li>
+			<li><img src="img/3.jpg"></li>
+			<li><img src="img/4.jpg"></li>
+		</ul>
+	</div>
+</body>
+</html>
