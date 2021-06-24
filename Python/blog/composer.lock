@@ -362,8 +362,8 @@
                 "almasaeed2010/adminlte": "~2.0",
                 "cebe/yii2-gravatar": "1.*",
                 "rmrevin/yii2-fontawesome": "~2.9",
-                "yiisoft/yii2": "2.*",
-                "yiisoft/yii2-bootstrap": "2.*"
+                "yiisoft/yii2": "2.0.38",
+                "yiisoft/yii2-bootstrap": "2.0.38"
             },
             "type": "yii2-extension",
             "extra": {
@@ -513,7 +513,7 @@
             "require": {
                 "fortawesome/font-awesome": "~4.7",
                 "php": ">=5.4.0",
-                "yiisoft/yii2": "2.0.*"
+                "yiisoft/yii2": "2.0.38"
             },
             "type": "yii2-extension",
             "extra": {
