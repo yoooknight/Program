@@ -317,7 +317,7 @@
                 "shasum": ""
             },
             "require": {
-                "yiisoft/yii2": "*"
+                "yiisoft/yii2": "2.0.38"
             },
             "type": "yii2-extension",
             "autoload": {
