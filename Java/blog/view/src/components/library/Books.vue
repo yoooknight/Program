@@ -1,6 +1,7 @@
 <template>
     <div>
-        <el-row style="height: 840px;">
+        <el-row style="height: 665px;">
+            <search-bar @onSearch="searchResult" ref="searchBar"></search-bar>
             <el-tooltip effect="dark" placement="right" v-for="item in books" :key="item.id">
                 <p slot="content" style="font-size: 14px;margin-bottom: 6px;">{{item.title}}</p>
                 <p slot="content" style="font-size: 13px;margin-bottom: 6px">
@@ -9,18 +10,20 @@
                     <span>{{item.press}}</span>
                 </p>
                 <p slot="content" style="width: 300px" class="abstract">{{item.abs}}</p>
-                <el-card style="width: 135px;margin-bottom: 20px;height:233px;flat: left;margin-right: 15px" class="book" bodyStyle="padding:10px" shadow="hover">
-                    <div class="cover">
+                <el-card style="width: 135px;margin-bottom: 20px;height:233px;flat: left;margin-right: 80px;margin-top:20px;float:left" class="book" bodyStyle="padding:10px" shadow="hover">
+                    <div class="cover" @click="editBook(item)">
                         <img :src="item.cover" alt="封面">
                     </div>
                     <div class="info">
                         <div class="title">
                             <a href="">{{item.title}}</a>
                         </div>
+                        <i class="el-icon-delete" @click="deleteBook(item.id)"></i>
                     </div>
                     <div class="author">{{item.author}}</div>
                 </el-card>
             </el-tooltip>
+            <edit-form @onSubmit="loadBooks()" ref="edit"></edit-form>
         </el-row>
         <el-row>
             <el-pagination :current-page="1" :page-size="10" :total="20"></el-pagination>

@@ -1,5 +1,5 @@
 <template>
-    <div style="margin-bottom: 30px;display: flex;justify-content: center;align-items: center">
+    <div style="margin-bottom: 30px;display: flex;justify-content: center;align-items: center; width:200px;float:right">
         <el-input>
             @keyup.enter.native="searchBlick"
             placeholder = "通过书名或作者搜索..."
@@ -24,7 +24,7 @@ export default {
     }
   },
   methods: {
-    searchClidk () {
+    searchClick () {
       this.$emit('onSearch')
     }
   }

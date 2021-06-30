@@ -1,7 +1,9 @@
 package com.evan.yoooknight.controller;
 
 import com.evan.yoooknight.pojo.Book;
+import com.evan.yoooknight.pojo.Category;
 import com.evan.yoooknight.service.BookService;
+import com.evan.yoooknight.service.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -12,9 +14,17 @@ public class LibraryController {
     @Autowired
     BookService bookService;
 
+    @Autowired
+    CategoryService categoryService;
+
     @GetMapping("/api/books")
     public List<Book> list() throws Exception {
         return bookService.list();
+    }
+
+    @GetMapping("/api/categories")
+    public List<Category> categoryList() throws Exception {
+        return categoryService.list();
     }
 
     @PostMapping("/api/books")

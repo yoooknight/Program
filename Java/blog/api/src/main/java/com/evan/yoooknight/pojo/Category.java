@@ -14,4 +14,5 @@ public class Category {
     @Column(name="id")
     public int id;
     public String name;
+    public String icon;
 }
