@@ -1,8 +1,8 @@
 {
-  "name": "ws-vue",
+  "name": "ws_vue",
   "version": "1.0.0",
   "description": "A Vue.js project",
-  "author": "wangsong <wangsong@capsheaf.com.cn>",
+  "author": "wangsong <1592388194@qq.com>",
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
@@ -15,10 +15,10 @@
   },
   "dependencies": {
     "axios": "^0.21.1",
-    "element-ui": "^2.13.2",
+    "element-ui": "^2.15.3",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1",
-    "vuex": "^3.4.0"
+    "vuex": "^3.6.2"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
@@ -56,7 +56,7 @@
     "jest": "^22.0.4",
     "jest-serializer-vue": "^0.3.0",
     "nightwatch": "^0.9.12",
-    "node-notifier": "^8.0.1",
+    "node-notifier": "^5.1.2",
     "optimize-css-assets-webpack-plugin": "^3.2.0",
     "ora": "^1.2.0",
     "portfinder": "^1.0.13",
@@ -74,8 +74,8 @@
     "vue-style-loader": "^3.0.1",
     "vue-template-compiler": "^2.5.2",
     "webpack": "^3.6.0",
-    "webpack-bundle-analyzer": "^3.3.2",
-    "webpack-dev-server": "^3.1.11",
+    "webpack-bundle-analyzer": "^2.9.0",
+    "webpack-dev-server": "^2.9.1",
     "webpack-merge": "^4.1.0"
   },
   "engines": {
