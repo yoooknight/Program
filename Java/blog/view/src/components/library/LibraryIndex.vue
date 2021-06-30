@@ -5,7 +5,7 @@
       <SideMenu @indexSelect="listByCategory" ref="sideMenu"></SideMenu>
     </el-aside>
     <el-main>
-      <books class="books-area" ref="booksArea"></books>
+      <books class="books-area" ref="booksArea" style="position:fixed; left:260px; top:100px; width:1000px"></books>
     </el-main>
   </el-container>
 </template>

@@ -10,7 +10,7 @@
                     <span>{{item.press}}</span>
                 </p>
                 <p slot="content" style="width: 300px" class="abstract">{{item.abs}}</p>
-                <el-card style="width: 135px;margin-bottom: 20px;height:233px;flat: left;margin-right: 80px;margin-top:20px;float:left" class="book" bodyStyle="padding:10px" shadow="hover">
+                <el-card style="width: 135px;margin-bottom: 20px;height:233px;flat: left;margin-right: 80px;margin-top:5px;float:left" class="book" bodyStyle="padding:10px" shadow="hover">
                     <div class="cover" @click="editBook(item)">
                         <img :src="item.cover" alt="封面">
                     </div>
@@ -25,7 +25,7 @@
             </el-tooltip>
             <edit-form @onSubmit="loadBooks()" ref="edit"></edit-form>
         </el-row>
-        <el-row>
+        <el-row style="position:fixed;bottom:10px;right:500px">
             <el-pagination :current-page="1" :page-size="10" :total="20"></el-pagination>
         </el-row>
     </div>
