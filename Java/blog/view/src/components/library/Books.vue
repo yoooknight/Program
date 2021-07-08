@@ -42,7 +42,8 @@ export default {
       books: [],
       currentPage: 1,
       pagesize: 3,
-      total: 0
+      total: 0,
+      cid: 0
     }
   },
   mounted: function () {
@@ -51,8 +52,12 @@ export default {
   methods: {
     loadBooks () {
       var _this = this
+      var url = ''
 
-      this.$axios.get('/books/' + _this.currentPage + '/' + _this.pagesize).then(resp => {
+      console.log(_this.cid)
+      url = _this.cid ? ('categories/' + _this.cid + '/books/' + _this.currentPage + '/' + _this.pagesize) : ('/books/' + _this.currentPage + '/' + _this.pagesize)
+
+      this.$axios.get(url).then(resp => {
         if (resp && resp.status === 200) {
           _this.books = resp.data.content
           _this.total = resp.data.totalElements

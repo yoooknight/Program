@@ -21,10 +21,8 @@ export default {
       var _this = this
       var cid = this.$refs.sideMenu.cid
       var pagesize = this.$refs.booksArea.pagesize
-      var currentPage = this.$refs.booksArea.currentPage
+      var currentPage = 1
 
-      // console.log(this.$booksArea)
-      // console.log(this.$refs)
       console.log(currentPage)
       console.log(pagesize)
 
@@ -35,6 +33,7 @@ export default {
       this.$axios.get(url).then(resp => {
         if (resp && resp.status === 200) {
           _this.$refs.booksArea.books = resp.data.content
+          _this.$refs.booksArea.cid = cid
           _this.$refs.booksArea.total = resp.data.totalElements
         }
       })
