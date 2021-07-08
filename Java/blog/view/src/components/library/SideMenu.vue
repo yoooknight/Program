@@ -30,12 +30,6 @@ export default {
       this.$axios.get('/categories').then(resp => {
         if (resp && resp.status === 200) {
           _this.categoryList = resp.data.reverse()
-          // console.log(_this.categoryList)
-          // for (var i = 0; i < _this.categoryList.length; i++) {
-          //   console.log(_this.categoryList[i]['id'])
-          //   _this.categoryList[i]['index'] = _this.categoryList[i]['id']
-          //   console.log(_this.categoryList)
-          // }
         }
       })
     }

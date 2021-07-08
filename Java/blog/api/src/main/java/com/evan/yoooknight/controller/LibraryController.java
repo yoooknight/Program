@@ -5,6 +5,7 @@ import com.evan.yoooknight.pojo.Category;
 import com.evan.yoooknight.service.BookService;
 import com.evan.yoooknight.service.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -17,9 +18,9 @@ public class LibraryController {
     @Autowired
     CategoryService categoryService;
 
-    @GetMapping("/api/books")
-    public List<Book> list() throws Exception {
-        return bookService.list();
+    @GetMapping("/api/books/{page}/{pageSize}")
+    public Page<Book> list(@PathVariable("page") int page, @PathVariable("pageSize") int pageSize) throws Exception {
+        return bookService.list(page, pageSize);
     }
 
     @GetMapping("/api/categories")
@@ -27,7 +28,7 @@ public class LibraryController {
         return categoryService.list();
     }
 
-    @PostMapping("/api/books")
+    @PostMapping("/api/modify")
     public Book addOrUpdate(@RequestBody Book book) throws Exception {
         bookService.addOrUpdate(book);
         return book;
@@ -38,12 +39,12 @@ public class LibraryController {
         bookService.deleteById(book.getId());
     }
 
-    @GetMapping("/api/categories/{cid}/books")
-    public List<Book> listByCategory(@PathVariable("cid") int cid) throws Exception {
+    @GetMapping("/api/categories/{cid}/books/{page}/{pageSize}")
+    public Page<Book> listByCategory(@PathVariable("cid") int cid, @PathVariable("page") int page, @PathVariable("pageSize") int pageSize) throws Exception {
         if (0 != cid) {
-            return bookService.listByCategory(cid);
+            return bookService.listByCategory(cid, page, pageSize);
         } else {
-            return list();
+            return bookService.list(page, pageSize);
         }
     }
 }

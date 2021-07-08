@@ -26,7 +26,7 @@
             <edit-form @onSubmit="loadBooks()" ref="edit"></edit-form>
         </el-row>
         <el-row style="position:fixed;bottom:10px;right:500px">
-            <el-pagination :current-page="1" :page-size="10" :total="20"></el-pagination>
+            <el-pagination  @current-change="handleCurrentChange" :current-page=currentPage :page-size=pagesize :total=total></el-pagination>
         </el-row>
     </div>
 </template>
@@ -41,7 +41,8 @@ export default {
     return {
       books: [],
       currentPage: 1,
-      pagesize: 17
+      pagesize: 3,
+      total: 0
     }
   },
   mounted: function () {
@@ -50,14 +51,17 @@ export default {
   methods: {
     loadBooks () {
       var _this = this
-      this.$axios.get('/books').then(resp => {
+
+      this.$axios.get('/books/' + _this.currentPage + '/' + _this.pagesize).then(resp => {
         if (resp && resp.status === 200) {
-          _this.books = resp.data
+          _this.books = resp.data.content
+          _this.total = resp.data.totalElements
         }
       })
     },
     handleCurrentChange: function (currentPage) {
       this.currentPage = currentPage
+      this.loadBooks()
       console.log(this.currentPage)
     },
     searchResult () {

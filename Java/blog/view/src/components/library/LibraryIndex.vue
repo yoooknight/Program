@@ -20,13 +20,22 @@ export default {
     listByCategory () {
       var _this = this
       var cid = this.$refs.sideMenu.cid
-      var url = 'categories/' + cid + '/books'
+      var pagesize = this.$refs.booksArea.pagesize
+      var currentPage = this.$refs.booksArea.currentPage
+
+      // console.log(this.$booksArea)
+      // console.log(this.$refs)
+      console.log(currentPage)
+      console.log(pagesize)
+
+      var url = 'categories/' + cid + '/books/' + currentPage + '/' + pagesize
 
       console.log(url)
 
       this.$axios.get(url).then(resp => {
         if (resp && resp.status === 200) {
-          _this.$refs.booksArea.books = resp.data
+          _this.$refs.booksArea.books = resp.data.content
+          _this.$refs.booksArea.total = resp.data.totalElements
         }
       })
     }
