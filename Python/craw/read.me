@@ -1,0 +1,36 @@
+项目启动与打包说明（Windows / PowerShell）
+
+1. Python 环境
+- 建议 Python 3.10+
+- 所有命令尽量使用同一个 Python 解释器执行
+
+2. 需要安装的包
+- playwright
+- pandas
+- openpyxl
+- et-xmlfile
+- pygetwindow
+- pyautogui
+- pyinstaller
+
+3. 一次性安装依赖
+python -m pip install -U pip
+python -m pip install playwright pandas openpyxl et-xmlfile pygetwindow pyautogui pyinstaller
+
+4. 安装 Playwright Chromium
+python -m playwright install chromium
+
+5. 源码启动
+- 将 input.xlsx 放在项目根目录
+- 工作表名为 Sheet1，第一列放链接
+python dataSearch.py
+
+6. 打包（推荐用 spec）
+python -m PyInstaller --clean dataSearch.spec
+
+7. 打包（直接命令方式）
+python -m PyInstaller --onefile --add-data "C:\Users\15485\AppData\Local\ms-playwright\chromium-1155\;." dataSearch.py
+
+说明：
+- 如果 `chromium-1155` 版本目录变化，请把命令里的目录改成你本机 `C:\Users\15485\AppData\Local\ms-playwright\` 下实际的 `chromium-*` 目录。
+- 如果提示 `pyinstaller` 命令不存在，继续使用 `python -m PyInstaller ...` 即可。
