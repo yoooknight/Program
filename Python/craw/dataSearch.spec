@@ -5,7 +5,7 @@ a = Analysis(
     ['dataSearch.py'],
     pathex=[],
     binaries=[],
-    datas=[('C:\\Users\\15485\\AppData\\Local\\ms-playwright\\chromium-1155\\', '.')],
+    datas=[('C:\\Users\\15485\\AppData\\Local\\ms-playwright\\chromium-1208\\chrome-win64', 'chrome-win')],
     hiddenimports=[],
     hookspath=[],
     hooksconfig={},

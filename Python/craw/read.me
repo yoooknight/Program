@@ -25,12 +25,26 @@ python -m playwright install chromium
 - 工作表名为 Sheet1，第一列放链接
 python dataSearch.py
 
+安全使用提示：
+- 平台可能会把批量自动浏览、自动查看内容、伪装浏览器特征等行为识别为第三方工具或脚本。
+- 当前脚本已去掉浏览器伪装参数和自动滚动逻辑，并默认逐条确认链接、分批等待后继续。
+- 默认每批最多处理 10 条链接，可通过环境变量 `CRAW_MAX_LINKS_PER_RUN` 调整。
+- 默认每批结束等待 300 秒，可通过环境变量 `CRAW_BATCH_WAIT_SECONDS` 调整。
+- 默认逐条确认开启，可通过环境变量 `CRAW_CONFIRM_EACH_LINK=false` 关闭；关闭前请确认你的使用方式符合平台规则。
+
+PowerShell 示例：
+$env:CRAW_MAX_LINKS_PER_RUN="5"
+$env:CRAW_BATCH_WAIT_SECONDS="300"
+$env:CRAW_CONFIRM_EACH_LINK="true"
+python dataSearch.py
+
 6. 打包（推荐用 spec）
 python -m PyInstaller --clean dataSearch.spec
 
 7. 打包（直接命令方式）
-python -m PyInstaller --onefile --add-data "C:\Users\15485\AppData\Local\ms-playwright\chromium-1155\;." dataSearch.py
+python -m PyInstaller --onefile --add-data "C:\\Users\15485\AppData\Local\ms-playwright\chromium-1208\chrome-win64;." dataSearch.py
 
 说明：
-- 如果 `chromium-1155` 版本目录变化，请把命令里的目录改成你本机 `C:\Users\15485\AppData\Local\ms-playwright\` 下实际的 `chromium-*` 目录。
+- 如果 `chromium-1208` 版本目录变化，请把命令里的目录改成你本机 `C:\Users\15485\AppData\Local\ms-playwright\` 下实际的 `chromium-*` 目录。
+- 当前代码会自动尝试 `chrome.exe`、`chrome-win64\chrome.exe`、`chrome-win\chrome.exe` 三种打包路径。
 - 如果提示 `pyinstaller` 命令不存在，继续使用 `python -m PyInstaller ...` 即可。

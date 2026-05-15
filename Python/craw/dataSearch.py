@@ -17,6 +17,26 @@ import pyautogui
 # global browser
 
 FAILED_VALUE = "--"
+DEFAULT_MAX_LINKS_PER_RUN = 10
+DEFAULT_BATCH_WAIT_SECONDS = 150
+
+
+def get_int_env(name, default):
+    value = os.environ.get(name)
+    if value is None:
+        return default
+    try:
+        return int(value)
+    except ValueError:
+        write_log(f"环境变量[{name}]不是有效整数，使用默认值[{default}]")
+        return default
+
+
+def get_bool_env(name, default):
+    value = os.environ.get(name)
+    if value is None:
+        return default
+    return value.strip().lower() in ("1", "true", "yes", "y", "on")
 
 
 # def getUrls ():
@@ -78,14 +98,7 @@ def build_blank_result():
 
 def craw_web(page, author_url):
     try:
-        time.sleep(random.random())
-        time.sleep(random.uniform(0.5, 2))
         page.goto(author_url, wait_until="domcontentloaded", timeout=30000)
-
-        # 模拟人类滚动行为（避免被检测为机器人）
-        for _ in range(3):
-            page.mouse.wheel(0, random.randint(300, 600))
-            time.sleep(random.uniform(0.5, 2))
 
         write_log("正在加载笔记页面...")
 
@@ -131,6 +144,27 @@ def resource_path(relative_path):
         return os.path.join(os.path.dirname(__file__), relative_path)
 
 
+def find_chromium_executable():
+    if getattr(sys, 'frozen', False):
+        base_path = sys._MEIPASS
+    else:
+        base_path = os.path.dirname(__file__)
+
+    candidates = [
+        os.path.join(base_path, "chrome.exe"),
+        os.path.join(base_path, "chrome-win64", "chrome.exe"),
+        os.path.join(base_path, "chrome-win", "chrome.exe"),
+    ]
+
+    for candidate in candidates:
+        if os.path.exists(candidate):
+            return candidate
+
+    raise FileNotFoundError(
+        "未找到 Chromium 浏览器文件 chrome.exe，已检查路径: " + " | ".join(candidates)
+    )
+
+
 def write_log(logStr):
     print(logStr)
     currentDate = datetime.datetime.now().strftime("%m%d")
@@ -140,17 +174,24 @@ def write_log(logStr):
 
 
 if __name__ == '__main__':
+    max_links_per_run = get_int_env("CRAW_MAX_LINKS_PER_RUN", DEFAULT_MAX_LINKS_PER_RUN)
+    batch_wait_seconds = get_int_env("CRAW_BATCH_WAIT_SECONDS", DEFAULT_BATCH_WAIT_SECONDS)
+    confirm_each_link = get_bool_env("CRAW_CONFIRM_EACH_LINK", False)
+    write_log("提示：请确认你的使用方式符合平台规则。程序已关闭伪装参数，并默认分批访问。")
+    write_log(f"每批最多处理链接数: {max_links_per_run}")
+    write_log(f"每批结束等待秒数: {batch_wait_seconds}")
+    write_log(f"逐条确认: {'开启' if confirm_each_link else '关闭'}")
+
     # 获取屏幕分辨率
     # screen_width, screen_height = pyautogui.size()
     with sync_playwright() as p:
-        browser_path = os.path.join(os.path.dirname(__file__), 'chrome-win', 'chrome.exe')
+        browser_path = find_chromium_executable()
         write_log(browser_path)
-        # 启动浏览器（配置防检测参数）
+        # 启动浏览器
         browser = p.chromium.launch(
             executable_path=browser_path,
             headless=False,
             args=[
-                "--disable-blink-features=AutomationControlled",
                 "--start-maximized"
             ],
             # proxy={
@@ -159,20 +200,6 @@ if __name__ == '__main__':
         )
 
         page = browser.new_page()
-
-        page.set_extra_http_headers({
-            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3',
-            'Accept-Language': 'en-US,en;q=0.9',
-            'Accept-Encoding': 'gzip, deflate, br',
-            'Connection': 'keep-alive',
-        })
-
-        # 防检测设置
-        page.add_init_script("""
-                Object.defineProperty(navigator, 'webdriver', {
-                    get: () => undefined
-                })
-            """)
 
         # 打开小红书官网
         page.goto("https://www.xiaohongshu.com")
@@ -219,6 +246,7 @@ if __name__ == '__main__':
 
         # 读取数
         dataList = []
+        processed_links = 0
         for row in sheet.iter_rows(values_only=True):  # 逐行读取
             if not row:
                 write_log("检测到空白行，写入[空白链接]")
@@ -241,6 +269,21 @@ if __name__ == '__main__':
                 write_log("检测到空白行，写入[空白链接]")
                 dataList.append(build_blank_result())
             elif isinstance(row_url, str) and "https://www.xiaohongshu.com/" in row_url:
+                if processed_links >= max_links_per_run:
+                    write_log(f"已处理[{max_links_per_run}]条链接，暂停[{batch_wait_seconds}]秒后继续。")
+                    time.sleep(batch_wait_seconds)
+                    processed_links = 0
+
+                if confirm_each_link:
+                    try:
+                        confirm_value = input(f"即将打开链接：{row_url}\n确认继续请按回车，跳过请输入 s 后回车：").strip().lower()
+                    except EOFError:
+                        confirm_value = "s"
+                    if confirm_value == "s":
+                        write_log(f"用户跳过链接[{row_url}]")
+                        dataList.append(build_failed_result(row_url))
+                        continue
+
                 write_log(row_url)
                 try:
                     temp = craw_web(page, row_url)
@@ -248,6 +291,7 @@ if __name__ == '__main__':
                     write_log(f"主循环处理链接[{row_url}]异常: {str(e)}，已写入[{FAILED_VALUE}]并继续")
                     temp = build_failed_result(row_url)
                 dataList.append(temp)
+                processed_links += 1
             else:
                 dataList.append({
                     "url": row_url,
@@ -256,6 +300,7 @@ if __name__ == '__main__':
                     "comment_count": 0,
                     "share_count": 0
                 })
+            time.sleep(random.randint(1,20))
 
         # print(dataList)
 
